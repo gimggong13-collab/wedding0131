@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>원승재 & 박지민의 겨울 모바일 청첩장 ❄️💖</title>
+    <title>원승재 ❤️ 박지민 결혼합니다 ❄️💖</title>
 
     <!-- Dynamic Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="원승재 & 박지민의 겨울 모바일 청첩장 ❄️💕">
+    <meta property="og:title" content="원승재 ❤️ 박지민 결혼합니다 ❄️💖">
     <meta property="og:description" content="2027년 1월 31일 일요일 오후 1시, 저희 두 사람의 따뜻한 첫걸음에 초대합니다!✨">
     <meta property="og:image" content="https://lh3.googleusercontent.com/d/1s2xHT87v2ZSN1nhXLmwWMfgK84j0EaJT">
 
-    <!-- Cute Korean Google Fonts: Gaegu, Jua, Gowun Dodum -->
+    <!-- Highly Readable Korean & Handwritten Fonts: Gowun Batang, Noto Sans KR, Gowun Dodum, Patrick Hand -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,9 +44,10 @@
                         warmGold: '#F3E5AB'
                     },
                     fontFamily: {
-                        cute: ['Gaegu', 'cursive'],
-                        round: ['Jua', 'sans-serif'],
-                        sans: ['"Gowun Dodum"', 'sans-serif'],
+                        serif: ['"Gowun Batang"', 'serif'],
+                        sans: ['"Noto Sans KR"', '"Gowun Dodum"', 'sans-serif'],
+                        round: ['"Gowun Dodum"', 'sans-serif'],
+                        hand: ['"Patrick Hand"', '"Caveat"', 'cursive'],
                     }
                 }
             }
@@ -66,7 +67,7 @@
     <style>
         body {
             background-color: #EBF2F7;
-            font-family: 'Gowun Dodum', sans-serif;
+            font-family: 'Noto Sans KR', 'Gowun Dodum', sans-serif;
             color: #334155;
             margin: 0;
             padding: 0;
@@ -167,63 +168,83 @@
 
         <!-- Global Toast Notification UI -->
         <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-10px]">
-            <div class="bg-winterBlue-500 text-white px-5 py-2.5 rounded-full shadow-xl text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2 font-round border border-winterBlue-300">
+            <div class="bg-winterBlue-500 text-white px-5 py-2.5 rounded-full shadow-xl text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2 font-sans border border-winterBlue-300">
                 <i class="fa-solid fa-snowflake text-warmGold"></i>
                 <span id="toastMessage">복사되었습니다! 💕</span>
             </div>
         </div>
 
         <!-- ==========================================
-             SECTION 1: HERO COVER (WINTER LOVELY)
+             SECTION 1: HERO COVER (WINTER LOVELY & UPDATED PHOTO TEXT)
              ========================================== -->
         <section id="hero" class="relative w-full h-[100vh] min-h-[660px] flex flex-col justify-between items-center text-center p-6 bg-gradient-to-b from-winterBlue-100/70 via-white to-cozyRose-50/60 fade-in-section is-visible">
             
             <!-- Winter Cover Header Badge -->
             <div class="pt-6 z-10 space-y-1.5">
-                <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/90 shadow-sm border border-winterBlue-200 text-winterBlue-500 text-xs font-round backdrop-blur-xs">
-                    <span>❄️ WINTER WEDDING ❄️</span>
+                <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/90 shadow-sm border border-winterBlue-200 text-winterBlue-500 text-xs font-medium font-sans backdrop-blur-xs">
+                    <span>❄️ WEDDING INVITATION ❄️</span>
                 </div>
-                <p class="font-cute text-stone-500 text-lg">하얀 겨울날, 따스한 사랑을 시작합니다</p>
+                <p class="font-serif text-slate-600 text-base font-normal tracking-wide">하얀 겨울날, 따스한 사랑을 시작합니다</p>
             </div>
 
-            <!-- Hero Main Photo Frame with Cozy Winter Curved Frame -->
+            <!-- Hero Main Photo Frame with Cozy Winter Curved Frame & Styled Overlay -->
             <div class="relative w-full my-auto py-2">
-                <div class="relative mx-auto w-[82%] aspect-[3/4] rounded-[2.8rem] overflow-hidden shadow-2xl border-4 border-white/90 group">
+                <div class="relative mx-auto w-[84%] aspect-[3/4] rounded-[2.8rem] overflow-hidden shadow-2xl border-4 border-white/95 group">
                     <img id="heroImage" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop" 
                          alt="원승재 & 박지민 겨울 메인" 
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                          onerror="this.src='https://placehold.co/600x800/E1EFF7/3A7EA7?text=Winter+Wedding+♥'" />
                     
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+                    <!-- Dark Gradient Overlay for optimal legibility -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-black/20 to-slate-950/20"></div>
                     
-                    <!-- Overlay Names -->
-                    <div class="absolute bottom-6 left-0 right-0 text-white z-10 px-4">
-                        <h1 id="heroCoupleNames" class="font-cute text-3.5xl font-bold tracking-wider drop-shadow-lg">
-                            원승재 <span class="text-cozyRose-300">♥</span> 박지민
-                        </h1>
+                    <!-- Cute Arrow Annotations & Names (Swapped positions: Jimin on Left, Seungjae on Right) -->
+                    <!-- Left Pointer: Jimin -->
+                    <div class="absolute top-8 left-6 text-white text-left z-20 pointer-events-none">
+                        <span class="font-hand text-2xl font-bold tracking-wider text-white drop-shadow-md block -rotate-6">Jimin</span>
+                        <svg class="w-8 h-8 text-white stroke-current fill-none -mt-1 ml-3 drop-shadow-md" viewBox="0 0 50 50">
+                            <path d="M 10 5 Q 30 15 35 35" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+                            <path d="M 28 30 L 35 35 L 36 26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+
+                    <!-- Right Pointer: Seungjae -->
+                    <div class="absolute top-8 right-6 text-white text-right z-20 pointer-events-none">
+                        <span class="font-hand text-2xl font-bold tracking-wider text-white drop-shadow-md block rotate-6">Seungjae</span>
+                        <svg class="w-8 h-8 text-white stroke-current fill-none -mt-1 mr-3 ml-auto drop-shadow-md" viewBox="0 0 50 50">
+                            <path d="M 40 5 Q 20 15 15 35" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+                            <path d="M 22 26 L 15 35 L 22 32" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+
+                    <!-- Main Text Overlay (Korean names removed inside frame) -->
+                    <div class="absolute bottom-6 left-0 right-0 text-white z-20 px-3 text-center space-y-1">
+                        <h2 class="font-hand text-3xl sm:text-3.5xl text-white font-bold tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                            We're getting married!
+                        </h2>
                     </div>
                 </div>
 
                 <!-- Floating Winter Badges -->
-                <div class="absolute -bottom-1 right-[8%] bg-white/90 backdrop-blur-xs p-2.5 rounded-2xl shadow-md border border-winterBlue-100 float-cute">
+                <div class="absolute -bottom-1 right-[6%] bg-white/90 backdrop-blur-xs p-2.5 rounded-2xl shadow-md border border-winterBlue-100 float-cute">
                     <span class="text-xl">☃️</span>
                 </div>
-                <div class="absolute -top-1 left-[8%] bg-white/90 backdrop-blur-xs p-2.5 rounded-2xl shadow-md border border-winterBlue-100 float-cute" style="animation-delay: 1.2s;">
+                <div class="absolute -top-1 left-[6%] bg-white/90 backdrop-blur-xs p-2.5 rounded-2xl shadow-md border border-winterBlue-100 float-cute" style="animation-delay: 1.2s;">
                     <span class="text-xl">❄️</span>
                 </div>
             </div>
 
             <!-- Cover Bottom Date & Venue Summary -->
             <div class="pb-6 z-10 space-y-2">
-                <p id="heroDateText" class="font-round text-lg text-slate-700 tracking-wide">
+                <p id="heroDateText" class="font-sans font-semibold text-slate-800 text-base tracking-wide">
                     2027년 1월 31일 일요일 오후 1:00
                 </p>
-                <p id="heroVenueText" class="font-sans text-xs text-slate-500 font-medium">
+                <p id="heroVenueText" class="font-sans text-xs text-slate-600 font-medium">
                     천안아산역 CA웨딩컨벤션 2층
                 </p>
 
                 <!-- Scroll Down Indicator -->
-                <div class="pt-2 flex flex-col items-center gap-1 text-winterBlue-400 font-cute text-base">
+                <div class="pt-2 flex flex-col items-center gap-1 text-winterBlue-500 font-sans text-xs font-medium">
                     <span>아래로 스크롤해주세요 ❄️</span>
                     <i class="fa-solid fa-chevron-down text-xs float-cute"></i>
                 </div>
@@ -238,19 +259,19 @@
             <div class="max-w-xs mx-auto space-y-7">
                 
                 <!-- Cute Winter Tag -->
-                <div class="inline-block px-4 py-1.5 bg-winterBlue-50 rounded-full text-xs text-winterBlue-500 font-round border border-winterBlue-200">
+                <div class="inline-block px-4 py-1.5 bg-winterBlue-50 rounded-full text-xs text-winterBlue-600 font-medium font-sans border border-winterBlue-200">
                     💌 초대의 글
                 </div>
 
-                <!-- Main Title -->
-                <h2 id="invitationTitle" class="font-round text-2xl font-normal leading-relaxed text-slate-800">
+                <!-- Main Title with Clean Readable Serif -->
+                <h2 id="invitationTitle" class="font-serif text-xl sm:text-2xl font-bold leading-relaxed text-slate-800 tracking-wide">
                     하얀 겨울 햇살처럼<br/>포근하게 살겠습니다 ❄️
                 </h2>
 
                 <div class="w-12 h-[2px] bg-winterBlue-200 mx-auto rounded-full"></div>
 
-                <!-- Invitation Message Text -->
-                <div id="invitationBody" class="font-cute text-xl leading-relaxed text-slate-600 font-bold space-y-2">
+                <!-- Invitation Message Text (Enhanced Readability) -->
+                <div id="invitationBody" class="font-serif text-sm sm:text-base leading-loose text-slate-700 font-normal space-y-1 tracking-wide">
                     <!-- Populated by JS config -->
                 </div>
 
@@ -259,12 +280,12 @@
                     <div class="flex justify-center items-center gap-2">
                         <span class="font-medium" id="groomParentsText">원상규 · 봉주현</span>
                         <span class="text-slate-400 text-[11px]">의 삼남</span>
-                        <span class="font-bold text-winterBlue-500 text-sm" id="groomNameText">원승재</span>
+                        <span class="font-bold text-winterBlue-600 text-sm" id="groomNameText">원승재</span>
                     </div>
                     <div class="flex justify-center items-center gap-2">
                         <span class="font-medium" id="brideParentsText">박진홍 · 방경희</span>
                         <span class="text-slate-400 text-[11px]">의 장녀</span>
-                        <span class="font-bold text-cozyRose-400 text-sm" id="brideNameText">박지민</span>
+                        <span class="font-bold text-cozyRose-500 text-sm" id="brideNameText">박지민</span>
                     </div>
                 </div>
             </div>
@@ -278,13 +299,13 @@
             <div class="max-w-xs mx-auto space-y-7">
                 <!-- Section Header -->
                 <div class="space-y-1">
-                    <p class="font-round text-xs tracking-widest text-winterBlue-500 uppercase">❄️ WEDDING DAY ❄️</p>
-                    <h3 id="calendarMonthHeader" class="font-round text-2xl font-normal text-slate-800">2027년 1월</h3>
+                    <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">❄️ WEDDING DAY ❄️️</p>
+                    <h3 id="calendarMonthHeader" class="font-serif text-2xl font-bold text-slate-800">2027년 1월</h3>
                 </div>
 
                 <!-- Calendar Card -->
                 <div class="bg-white/90 p-6 rounded-[2.2rem] shadow-sm border border-winterBlue-100 backdrop-blur-xs">
-                    <div class="grid grid-cols-7 gap-2 text-xs font-round text-slate-400 pb-3 border-b border-winterBlue-100">
+                    <div class="grid grid-cols-7 gap-2 text-xs font-medium font-sans text-slate-400 pb-3 border-b border-winterBlue-100">
                         <span class="text-cozyRose-400">일</span>
                         <span>월</span>
                         <span>화</span>
@@ -301,26 +322,26 @@
 
                 <!-- Real-time Countdown Timer -->
                 <div class="bg-white/90 p-5 rounded-[2.2rem] shadow-sm border border-winterBlue-100 space-y-3">
-                    <p id="countdownMessage" class="font-round text-sm text-slate-700">
-                        승재 <span class="text-cozyRose-400">♥</span> 지민의 예식이 <span id="daysLeftNum" class="font-bold text-winterBlue-500 text-lg">0</span>일 남았습니다! ☃️
+                    <p id="countdownMessage" class="font-sans text-sm font-medium text-slate-700">
+                        승재 <span class="text-cozyRose-400">♥</span> 지민의 예식이 <span id="daysLeftNum" class="font-bold text-winterBlue-600 text-lg">0</span>일 남았습니다! ☃️
                     </p>
 
-                    <div class="grid grid-cols-4 gap-2 text-center font-round">
+                    <div class="grid grid-cols-4 gap-2 text-center font-sans">
                         <div class="bg-winterBlue-50 p-2.5 rounded-2xl border border-winterBlue-100">
-                            <span id="cdDays" class="block text-lg font-bold text-winterBlue-500">00</span>
-                            <span class="text-[9px] text-slate-400 tracking-wider">DAYS</span>
+                            <span id="cdDays" class="block text-lg font-bold text-winterBlue-600">00</span>
+                            <span class="text-[9px] text-slate-400 tracking-wider font-semibold">DAYS</span>
                         </div>
                         <div class="bg-winterBlue-50 p-2.5 rounded-2xl border border-winterBlue-100">
-                            <span id="cdHours" class="block text-lg font-bold text-winterBlue-500">00</span>
-                            <span class="text-[9px] text-slate-400 tracking-wider">HOURS</span>
+                            <span id="cdHours" class="block text-lg font-bold text-winterBlue-600">00</span>
+                            <span class="text-[9px] text-slate-400 tracking-wider font-semibold">HOURS</span>
                         </div>
                         <div class="bg-winterBlue-50 p-2.5 rounded-2xl border border-winterBlue-100">
-                            <span id="cdMinutes" class="block text-lg font-bold text-winterBlue-500">00</span>
-                            <span class="text-[9px] text-slate-400 tracking-wider">MINS</span>
+                            <span id="cdMinutes" class="block text-lg font-bold text-winterBlue-600">00</span>
+                            <span class="text-[9px] text-slate-400 tracking-wider font-semibold">MINS</span>
                         </div>
                         <div class="bg-winterBlue-50 p-2.5 rounded-2xl border border-winterBlue-100">
-                            <span id="cdSeconds" class="block text-lg font-bold text-winterBlue-500">00</span>
-                            <span class="text-[9px] text-slate-400 tracking-wider">SECS</span>
+                            <span id="cdSeconds" class="block text-lg font-bold text-winterBlue-600">00</span>
+                            <span class="text-[9px] text-slate-400 tracking-wider font-semibold">SECS</span>
                         </div>
                     </div>
                 </div>
@@ -333,9 +354,9 @@
              ========================================== -->
         <section id="gallery" class="px-6 py-16 bg-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
-                <p class="font-round text-xs tracking-widest text-winterBlue-500 uppercase">📸 GALLERY (21)</p>
-                <h3 class="font-round text-2xl text-slate-800">우리의 예쁜 순간들</h3>
-                <p class="font-sans text-xs text-slate-400">사진을 터치하시면 크게 보실 수 있어요 ❄️</p>
+                <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">📸 GALLERY (21)</p>
+                <h3 class="font-serif text-2xl font-bold text-slate-800">우리의 예쁜 순간들</h3>
+                <p class="font-sans text-xs text-slate-500">사진을 터치하시면 크게 보실 수 있어요 ❄️</p>
             </div>
 
             <!-- Thumbnail Grid (Default 9 visible, expands to all 21) -->
@@ -345,7 +366,7 @@
 
             <!-- Expand / Collapse Gallery Button for 21 photos -->
             <div class="mt-6 text-center">
-                <button id="toggleGalleryBtn" onclick="toggleGalleryExpand()" class="px-6 py-3 rounded-full bg-winterBlue-50 hover:bg-winterBlue-100 border border-winterBlue-200 text-winterBlue-600 font-round text-xs transition-all shadow-xs inline-flex items-center gap-2">
+                <button id="toggleGalleryBtn" onclick="toggleGalleryExpand()" class="px-6 py-3 rounded-full bg-winterBlue-50 hover:bg-winterBlue-100 border border-winterBlue-200 text-winterBlue-600 font-sans text-xs font-medium transition-all shadow-xs inline-flex items-center gap-2">
                     <span id="toggleGalleryBtnText">📷 사진 12장 더보기 (총 21장)</span>
                     <i id="toggleGalleryIcon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                 </button>
@@ -355,7 +376,7 @@
         <!-- Lightbox Modal for 21 Photos Navigation -->
         <div id="lightboxModal" class="fixed inset-0 z-50 glass-modal flex flex-col justify-between p-4 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="flex justify-between items-center text-white px-2 pt-2">
-                <span id="lightboxCounter" class="font-round text-sm tracking-widest opacity-90">1 / 21</span>
+                <span id="lightboxCounter" class="font-sans text-sm tracking-widest opacity-90">1 / 21</span>
                 <button onclick="closeLightbox()" class="w-10 h-10 flex items-center justify-center text-2xl text-slate-300 hover:text-white">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -374,7 +395,7 @@
             </div>
 
             <div class="text-center pb-4 text-xs text-slate-300 font-sans">
-                <span>화면 좌우 스와이프 또는 화살표 버튼으로 다음 사진을 보세요 ❄️</span>
+                <span>화면 좌우 스와이프 또는 화살표 버튼으로 다음 사진을 보세요 ❄️️</span>
             </div>
         </div>
 
@@ -384,9 +405,9 @@
              ========================================== -->
         <section id="location" class="px-6 py-16 bg-winterBlue-50/30 border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
-                <p class="font-round text-xs tracking-widest text-winterBlue-500 uppercase">📍 LOCATION</p>
-                <h3 id="locationVenueTitle" class="font-round text-2xl text-slate-800">오시는 길</h3>
-                <p id="locationAddressText" class="font-sans text-xs text-slate-500">충남 아산시 배방읍 희망로 100</p>
+                <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">📍 LOCATION</p>
+                <h3 id="locationVenueTitle" class="font-serif text-2xl font-bold text-slate-800">오시는 길</h3>
+                <p id="locationAddressText" class="font-sans text-xs text-slate-600">충남 아산시 배방읍 희망로 100</p>
             </div>
 
             <!-- Map Container -->
@@ -396,26 +417,26 @@
                 <!-- Address & Copy Button -->
                 <div class="flex items-center justify-between px-1 py-1 text-xs">
                     <div class="space-y-0.5">
-                        <p class="font-round text-slate-800 text-sm" id="mapHallDetailText">천안아산역 CA웨딩컨벤션 2층</p>
-                        <p class="text-slate-400 text-[11px]" id="mapAddressSubText">TEL. 041-520-9999</p>
+                        <p class="font-sans font-semibold text-slate-800 text-sm" id="mapHallDetailText">천안아산역 CA웨딩컨벤션 2층</p>
+                        <p class="text-slate-500 text-[11px]" id="mapAddressSubText">TEL. 041-520-9999</p>
                     </div>
-                    <button onclick="copyAddress()" class="px-3.5 py-1.5 rounded-full bg-winterBlue-50 hover:bg-winterBlue-100 text-winterBlue-500 font-round transition-colors flex items-center gap-1.5 border border-winterBlue-200">
+                    <button onclick="copyAddress()" class="px-3.5 py-1.5 rounded-full bg-winterBlue-50 hover:bg-winterBlue-100 text-winterBlue-600 font-sans font-medium transition-colors flex items-center gap-1.5 border border-winterBlue-200">
                         <i class="fa-regular fa-copy"></i>
                         <span>주소 복사</span>
                     </button>
                 </div>
 
                 <!-- Navigation App Links -->
-                <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100">
-                    <a id="naviNaverLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-emerald-50 text-emerald-700 font-round text-xs border border-emerald-200/60 hover:bg-emerald-100 transition-colors">
+                <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100 font-sans font-medium">
+                    <a id="naviNaverLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-emerald-50 text-emerald-700 text-xs border border-emerald-200/60 hover:bg-emerald-100 transition-colors">
                         <i class="fa-solid fa-map-location-dot"></i>
                         <span>네이버지도</span>
                     </a>
-                    <a id="naviKakaoLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-amber-50 text-amber-800 font-round text-xs border border-amber-200/60 hover:bg-amber-100 transition-colors">
+                    <a id="naviKakaoLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-amber-50 text-amber-800 text-xs border border-amber-200/60 hover:bg-amber-100 transition-colors">
                         <i class="fa-solid fa-location-arrow"></i>
                         <span>카카오내비</span>
                     </a>
-                    <a id="naviTmapLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-sky-50 text-sky-700 font-round text-xs border border-sky-200/60 hover:bg-sky-100 transition-colors">
+                    <a id="naviTmapLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-sky-50 text-sky-700 text-xs border border-sky-200/60 hover:bg-sky-100 transition-colors">
                         <i class="fa-solid fa-car"></i>
                         <span>티맵</span>
                     </a>
@@ -425,24 +446,24 @@
             <!-- Transport Details -->
             <div class="mt-6 space-y-3 bg-white p-5 rounded-[2.2rem] shadow-sm border border-winterBlue-100 text-xs leading-relaxed text-slate-600 font-sans">
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 font-round text-slate-800 text-sm">
-                        <i class="fa-solid fa-train text-winterBlue-400"></i>
+                    <div class="flex items-center gap-2 font-semibold text-slate-800 text-sm">
+                        <i class="fa-solid fa-train text-winterBlue-500"></i>
                         <span>KTX / SRT 이용 안내</span>
                     </div>
                     <p class="pl-5 text-slate-500">천안아산역 하차 후 역사 내 2층 CA웨딩컨벤션 직통 연결 (추운 겨울 밖으로 나가지 않고 편리하게 이동 가능합니다)</p>
                 </div>
                 <div class="w-full h-[1px] bg-slate-100"></div>
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 font-round text-slate-800 text-sm">
-                        <i class="fa-solid fa-subway text-winterBlue-400"></i>
+                    <div class="flex items-center gap-2 font-semibold text-slate-800 text-sm">
+                        <i class="fa-solid fa-subway text-winterBlue-500"></i>
                         <span>지하철 이용 안내</span>
                     </div>
                     <p class="pl-5 text-slate-500">수도권 1호선 아산역 하차 (천안아산역 환승통로 이용)</p>
                 </div>
                 <div class="w-full h-[1px] bg-slate-100"></div>
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 font-round text-slate-800 text-sm">
-                        <i class="fa-solid fa-square-parking text-winterBlue-400"></i>
+                    <div class="flex items-center gap-2 font-semibold text-slate-800 text-sm">
+                        <i class="fa-solid fa-square-parking text-winterBlue-500"></i>
                         <span>주차 안내</span>
                     </div>
                     <p class="pl-5 text-slate-500">천안아산역 역사 주차장 및 와이몰 주차장 이용 (2시간 무료 주차 지원)</p>
@@ -456,19 +477,19 @@
              ========================================== -->
         <section id="accounts" class="px-6 py-16 bg-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
-                <p class="font-round text-xs tracking-widest text-winterBlue-500 uppercase">🎁 GIFT</p>
-                <h3 class="font-round text-2xl text-slate-800">마음 전하실 곳</h3>
+                <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">🎁 GIFT</p>
+                <h3 class="font-serif text-2xl font-bold text-slate-800">마음 전하실 곳</h3>
                 <p class="font-sans text-xs text-slate-500 leading-relaxed">
                     참석이 어려우신 분들을 위해<br/>계좌번호를 기재하였습니다. 넓은 양해 부탁드립니다.
                 </p>
             </div>
 
             <!-- Accordion Group -->
-            <div class="space-y-3 max-w-sm mx-auto">
+            <div class="space-y-3 max-w-sm mx-auto font-sans">
                 <!-- Groom Side Accordion -->
                 <div class="bg-winterBlue-50/40 rounded-3xl border border-winterBlue-100 overflow-hidden">
                     <button onclick="toggleAccordion('groomAccounts')" class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-winterBlue-100/50 transition-colors">
-                        <span class="font-round text-sm text-slate-800">💙 신랑측 계좌번호 보기</span>
+                        <span class="text-sm font-semibold text-slate-800">💙 신랑측 계좌번호 보기</span>
                         <i id="groomAccountsIcon" class="fa-solid fa-chevron-down text-xs text-winterBlue-400 transition-transform duration-300"></i>
                     </button>
                     
@@ -482,7 +503,7 @@
                 <!-- Bride Side Accordion -->
                 <div class="bg-cozyRose-50/40 rounded-3xl border border-cozyRose-100 overflow-hidden">
                     <button onclick="toggleAccordion('brideAccounts')" class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-cozyRose-100/50 transition-colors">
-                        <span class="font-round text-sm text-slate-800">💖 신부측 계좌번호 보기</span>
+                        <span class="text-sm font-semibold text-slate-800">💖 신부측 계좌번호 보기</span>
                         <i id="brideAccountsIcon" class="fa-solid fa-chevron-down text-xs text-cozyRose-400 transition-transform duration-300"></i>
                     </button>
                     
@@ -501,9 +522,9 @@
              ========================================== -->
         <section id="guestbook" class="px-6 py-16 bg-gradient-to-b from-winterBlue-50/30 to-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
-                <p class="font-round text-xs tracking-widest text-winterBlue-500 uppercase">💬 GUESTBOOK</p>
-                <h3 class="font-round text-2xl text-slate-800">축하의 한마디</h3>
-                <p class="font-sans text-xs text-slate-500">겨울날의 주인공 신랑, 신부에게 따뜻한 온기를 남겨주세요 ❄️</p>
+                <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">💬 GUESTBOOK</p>
+                <h3 class="font-serif text-2xl font-bold text-slate-800">축하의 한마디</h3>
+                <p class="font-sans text-xs text-slate-500">겨울날의 주인공 신랑, 신부에게 축하 메시지를 남겨주세요 ❄️</p>
             </div>
 
             <!-- Guestbook Input Form -->
@@ -512,9 +533,9 @@
                     <input type="text" id="gbName" placeholder="성함" class="w-full px-3.5 py-2.5 text-xs border border-winterBlue-200 rounded-2xl focus:outline-none focus:border-winterBlue-400 bg-winterBlue-50/20">
                     <input type="password" id="gbPassword" placeholder="비밀번호 (삭제용)" class="w-full px-3.5 py-2.5 text-xs border border-winterBlue-200 rounded-2xl focus:outline-none focus:border-winterBlue-400 bg-winterBlue-50/20">
                 </div>
-                <textarea id="gbMessage" rows="3" placeholder="따뜻한 축하 메시지를 입력해주세요..." class="w-full p-3.5 text-xs border border-winterBlue-200 rounded-2xl focus:outline-none focus:border-winterBlue-400 bg-winterBlue-50/20 resize-none font-sans"></textarea>
+                <textarea id="gbMessage" rows="3" placeholder="축하 메시지를 입력해주세요..." class="w-full p-3.5 text-xs border border-winterBlue-200 rounded-2xl focus:outline-none focus:border-winterBlue-400 bg-winterBlue-50/20 resize-none font-sans"></textarea>
                 
-                <button onclick="addGuestbookEntry()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 hover:bg-winterBlue-600 text-white text-xs font-round transition-colors shadow-xs">
+                <button onclick="addGuestbookEntry()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 hover:bg-winterBlue-600 text-white text-xs font-medium font-sans transition-colors shadow-xs">
                     축하 메시지 남기기 ✨
                 </button>
             </div>
@@ -535,19 +556,19 @@
                 <!-- RSVP Card -->
                 <div class="p-6 rounded-[2.2rem] bg-gradient-to-br from-winterBlue-50 to-cozyRose-50 border border-winterBlue-100 space-y-3">
                     <i class="fa-solid fa-envelope-open-text text-3xl text-winterBlue-400 float-cute"></i>
-                    <h4 class="font-round text-lg text-slate-800">참석 여부 전달하기</h4>
+                    <h4 class="font-serif text-lg font-bold text-slate-800">참석 여부 전달하기</h4>
                     <p class="font-sans text-xs text-slate-500 leading-relaxed">
                         원활한 예식 및 연회 준비를 위해 참석 여부를 알려주시면 진심으로 감사드리겠습니다 ❄️
                     </p>
-                    <button onclick="openRsvpModal()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-round text-xs hover:bg-winterBlue-600 transition-colors shadow-xs">
+                    <button onclick="openRsvpModal()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-sans text-xs font-medium hover:bg-winterBlue-600 transition-colors shadow-xs">
                         참석 의사 전달하기 ✨
                     </button>
                 </div>
 
                 <!-- Share Buttons -->
                 <div class="space-y-3 pt-4">
-                    <p class="font-round text-xs text-slate-500">청첩장 공유하기</p>
-                    <div class="grid grid-cols-2 gap-2.5 font-round">
+                    <p class="font-sans text-xs text-slate-500">청첩장 공유하기</p>
+                    <div class="grid grid-cols-2 gap-2.5 font-sans font-medium">
                         <button onclick="shareKakao()" class="py-2.5 px-3 rounded-2xl bg-amber-300 text-amber-950 text-xs flex items-center justify-center gap-1.5 hover:bg-amber-400 transition-colors">
                             <i class="fa-solid fa-comment"></i>
                             <span>카카오톡 공유</span>
@@ -563,15 +584,15 @@
                 <div class="pt-4 text-left bg-winterBlue-50/50 p-3.5 rounded-2xl border border-winterBlue-100 flex items-center gap-3">
                     <img id="ogPreviewImage" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop" class="w-12 h-12 rounded-xl object-cover" alt="OG Thumbnail">
                     <div class="overflow-hidden space-y-0.5">
-                        <p id="ogPreviewTitle" class="font-round text-xs text-slate-800 truncate">원승재 & 박지민의 겨울 청첩장 ❄️💕</p>
+                        <p id="ogPreviewTitle" class="font-sans font-semibold text-xs text-slate-800 truncate">원승재 & 박지민의 겨울 청첩장 ❄️💕</p>
                         <p id="ogPreviewDesc" class="font-sans text-[10px] text-slate-400 truncate">2027년 1월 31일 일요일 오후 1:00</p>
                     </div>
                 </div>
             </div>
 
             <!-- Footer -->
-            <footer class="pt-10 pb-4 text-center font-round text-xs text-winterBlue-300 space-y-1">
-                <p class="text-sm">원승재 ♥ 박지민</p>
+            <footer class="pt-10 pb-4 text-center font-serif text-xs text-winterBlue-400 space-y-1">
+                <p class="text-sm font-semibold">원승재 ♥ 박지민</p>
                 <p class="font-sans text-[10px] opacity-70">Copyright © 2027 All Rights Reserved.</p>
             </footer>
         </section>
@@ -587,23 +608,23 @@
                 <button onclick="closeRsvpModal()" class="absolute top-4 right-4 text-slate-300 hover:text-slate-600">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
-                <h4 class="font-round text-lg text-slate-800">참석 여부 전달 ❄️</h4>
+                <h4 class="font-serif text-lg font-bold text-slate-800">참석 여부 전달 ❄️</h4>
                 <p class="font-sans text-xs text-slate-500">축복해 주시는 마음에 진심으로 감사드립니다.</p>
 
                 <div class="space-y-3 font-sans text-xs text-left">
                     <div>
-                        <label class="block mb-1 font-round text-slate-700">구분</label>
+                        <label class="block mb-1 font-semibold text-slate-700">구분</label>
                         <select id="rsvpSide" class="w-full p-2.5 border border-winterBlue-200 rounded-2xl bg-winterBlue-50/20 focus:outline-none">
                             <option value="groom">신랑측 하객</option>
                             <option value="bride">신부측 하객</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block mb-1 font-round text-slate-700">성함</label>
+                        <label class="block mb-1 font-semibold text-slate-700">성함</label>
                         <input type="text" id="rsvpName" placeholder="성함을 입력하세요" class="w-full p-2.5 border border-winterBlue-200 rounded-2xl bg-winterBlue-50/20 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block mb-1 font-round text-slate-700">동반 인원 (본인 포함)</label>
+                        <label class="block mb-1 font-semibold text-slate-700">동반 인원 (본인 포함)</label>
                         <select id="rsvpCount" class="w-full p-2.5 border border-winterBlue-200 rounded-2xl bg-winterBlue-50/20 focus:outline-none">
                             <option value="1">1명</option>
                             <option value="2">2명</option>
@@ -612,7 +633,7 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block mb-1 font-round text-slate-700">식사 여부</label>
+                        <label class="block mb-1 font-semibold text-slate-700">식사 여부</label>
                         <div class="flex gap-4 pt-1">
                             <label class="flex items-center gap-1.5"><input type="radio" name="rsvpMeal" value="yes" checked class="accent-winterBlue-500"> 식사함</label>
                             <label class="flex items-center gap-1.5"><input type="radio" name="rsvpMeal" value="no" class="accent-winterBlue-500"> 식사안함</label>
@@ -621,7 +642,7 @@
                     </div>
                 </div>
 
-                <button onclick="submitRsvp()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-round text-xs hover:bg-winterBlue-600 transition-colors">
+                <button onclick="submitRsvp()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-sans text-xs font-semibold hover:bg-winterBlue-600 transition-colors">
                     제출하기 💕
                 </button>
             </div>
@@ -630,12 +651,12 @@
         <!-- Password Modal for Guestbook Delete -->
         <div id="deleteModal" class="fixed inset-0 z-50 glass-modal flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="bg-white w-full max-w-xs rounded-[2.2rem] p-5 space-y-4 text-center shadow-2xl relative">
-                <h4 class="font-round text-base text-slate-800">메시지 삭제</h4>
+                <h4 class="font-serif text-base font-bold text-slate-800">메시지 삭제</h4>
                 <p class="font-sans text-xs text-slate-500">작성 시 입력한 비밀번호를 입력하세요.</p>
                 
                 <input type="password" id="deletePasswordInput" placeholder="비밀번호" class="w-full p-2.5 text-xs border border-winterBlue-200 rounded-2xl text-center focus:outline-none">
                 
-                <div class="grid grid-cols-2 gap-2 text-xs font-round">
+                <div class="grid grid-cols-2 gap-2 text-xs font-sans font-medium">
                     <button onclick="closeDeleteModal()" class="py-2.5 rounded-2xl bg-slate-100 text-slate-600">취소</button>
                     <button onclick="confirmDeleteGuestbook()" class="py-2.5 rounded-2xl bg-red-400 text-white">삭제</button>
                 </div>
@@ -647,11 +668,12 @@
 
     <script>
         /* ==========================================================================
-           1. WEDDING CONFIGURATION (WINTER THEME & 21 GALLERY PHOTOS)
+           1. WEDDING CONFIGURATION (READABLE FONTS & HERO OVERLAY)
            ========================================================================== */
         const weddingConfig = {
             groom: {
                 name: "원승재",
+                englishName: "Seungjae",
                 relation: "삼남",
                 parents: {
                     father: { name: "원상규", account: { bank: "신한", number: "110-123-456789", holder: "원상규" } },
@@ -661,6 +683,7 @@
             },
             bride: {
                 name: "박지민",
+                englishName: "Jimin",
                 relation: "장녀",
                 parents: {
                     father: { name: "박진홍", account: { bank: "대구은행", number: "146-13-026725", holder: "박진홍" } },
@@ -677,7 +700,7 @@
                 naviLinks: {
                     naver: "https://map.naver.com/v5/search/CA%EC%9B%A8%EB%94%A9%EC%BB%A8%EB%B2%A4%EC%85%98",
                     kakao: "https://map.kakao.com/link/map/CA웨딩컨벤션,36.7947,127.1045",
-                    tmap: "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0yOTk0NjI2MDAmcG9pSWQ9Mjk5NDYyNiZuYXZTZXE9JnR5cGU9MiZwb2lOYW1lPSVFQyU5NCVBOCVFQyU5NyU5MCVFQyU5RCVCNCVFQyU5QiVBOCVFQiU5NCVBOSVFQyVCQiVBOCVFQiVCMiVBNCVFQyU8NSU5OCZjZW50ZXJYPTQ1NzU4NDYmY2VudGVyWT0xMzI0NDU3JnRpbWU9MjAyNiVFQiU8NSU4NCswOSVFQyU5QiU5NCsyNyVFQyU5RCVCQysxMCUzQTE2JnRlbD0wNDEtNTIwLTk5OTkmYWRkcj0lRUMlQjYlQTklRUIlODIlQTgrJUVDJTk1JTg0JUVDJTgyJUIwJUVDJThCJTlDKyVFQiVCMCVCMCVFQiVCMCVBOSVFQyU5RCU8RCslRUQlOUQlQUMlRUIlQTclOUQlRUIlQTElOUMrMTAw&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D"
+                    tmap: "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0yOTk0NjI2MDAmcG9pSWQ9Mjk5NDYyNiZuYXZTZXE9JnR5cGU9MiZwb2lOYW1lPSVFQyU5NCVBOCVFQyU5NyU5MCVFQyU5RCVCNCVFQyU5QiVBOCVFQiU5NCVBOSVFQyVCQiVBOCVFQiVCMiVBNCVFQyU8NSU5OCZjZW50ZXJYPTQ1NzU4NDYmY2VudGVyWT0xMzI0NDU3JnRpbWU9MjAyNiVFQiU8NSU8NCswOSVFQyU5QiU5NCsyNyVFQyU5RCVCQysxMCUzQTE2JnRlbD0wNDEtNTIwLTk5OTkmYWRkcj0lRUMlQjYlQTklRUIlODIlQTgrJUVDJTk1JTg0JUVDJTgyJUIwJUVDJThCJTlDKyVFQiVCMCVCMCVFQiVCMCVBOSVFQyU5RCU8RCslRUQlOUQlQUMlRUIlQTclOUQlRUIlQTElOUMrMTAw&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D"
                 }
             },
             invitation: {
@@ -723,8 +746,8 @@
 
         /* Guestbook Initial Items */
         let guestbookData = [
-            { id: 1, name: "박지성", message: "승재야 지민아 축하해! 눈부신 겨울날 두 사람의 따뜻한 첫걸음을 축복해 💕", time: "2026.11.10 14:20", pass: "1234" },
-            { id: 2, name: "손흥민", message: "결혼 너무 축하해! 세상을 비추는 따스하고 행복한 가정이 되길 바랄게 ❄️✨", time: "2026.11.12 09:15", pass: "1234" }
+            { id: 1, name: "박지민", message: "저희의 결혼식에 함께해주셔서 너무 감사합니다! 💕", time: "2026.11.10 14:20", pass: "1234" },
+            { id: 2, name: "원승재", message: "결혼 너무 축하해! 세상을 비추는 따스하고 행복한 가정이 되길 바랄게 ❄️✨", time: "2026.11.12 09:15", pass: "1234" }
         ];
 
         let currentLightboxIndex = 0;
@@ -745,9 +768,7 @@
             initBgm();
         });
 
-        /* ==========================================================================
-           SNOWFALL CANYON CANVAS EFFECT
-           ========================================================================== */
+        /* Snowfall Animation */
         function initSnowfallCanvas() {
             const canvas = document.getElementById("snowCanvas");
             const ctx = canvas.getContext("2d");
@@ -775,7 +796,6 @@
 
             function drawSnow() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
 
                 for (let i = 0; i < flakeCount; i++) {
                     const f = flakes[i];
@@ -784,7 +804,6 @@
                     ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
                     ctx.fill();
 
-                    // Movement
                     f.y += f.speed;
                     f.x += Math.sin(f.d) * 0.5;
 
@@ -885,14 +904,17 @@
             }
         }
 
-        /* Render Logic */
+        /* Render Hero & Invitation with High Readability */
         function renderHeroAndInvitation() {
-            document.getElementById("heroCoupleNames").innerHTML = `${weddingConfig.groom.name} <span class="text-cozyRose-300">♥</span> ${weddingConfig.bride.name}`;
+            const heroCoupleElem = document.getElementById("heroCoupleNames");
+            if (heroCoupleElem) {
+                heroCoupleElem.innerHTML = `${weddingConfig.groom.name} <span class="text-cozyRose-300">♥</span> ${weddingConfig.bride.name}`;
+            }
             document.getElementById("heroDateText").innerText = "2027년 1월 31일 일요일 오후 1:00";
             document.getElementById("heroVenueText").innerText = weddingConfig.wedding.venueName;
 
             document.getElementById("invitationTitle").innerHTML = weddingConfig.invitation.title.replace('\n', '<br/>');
-            const bodyHtml = weddingConfig.invitation.body.map(line => line === "" ? "<br/>" : `<p>${line}</p>`).join("");
+            const bodyHtml = weddingConfig.invitation.body.map(line => line === "" ? "<br/>" : `<p class="py-0.5">${line}</p>`).join("");
             document.getElementById("invitationBody").innerHTML = bodyHtml;
 
             document.getElementById("groomParentsText").innerText = `${weddingConfig.groom.parents.father.name} · ${weddingConfig.groom.parents.mother.name}`;
@@ -925,7 +947,7 @@
                 dateCell.className = "py-1 flex items-center justify-center relative font-medium";
                 
                 if (d === day) {
-                    dateCell.innerHTML = `<span class="w-7 h-7 rounded-full bg-winterBlue-500 text-white flex items-center justify-center shadow-xs font-round text-xs">❄️</span>`;
+                    dateCell.innerHTML = `<span class="w-7 h-7 rounded-full bg-winterBlue-500 text-white flex items-center justify-center shadow-xs font-semibold text-xs">❄️</span>`;
                 } else {
                     dateCell.innerText = d;
                 }
@@ -961,9 +983,7 @@
             setInterval(updateTimer, 1000);
         }
 
-        /* ==========================================================================
-           21 PHOTOS GALLERY & EXPANSION
-           ========================================================================== */
+        /* 21 Photos Gallery */
         function renderGallery() {
             const grid = document.getElementById("galleryGrid");
             grid.innerHTML = "";
@@ -1057,7 +1077,7 @@
             });
 
             L.marker([coords.lat, coords.lng], { icon: weddingIcon }).addTo(map)
-                .bindPopup(`<b style="font-family:'Jua'">${weddingConfig.wedding.venueName}</b>`).openPopup();
+                .bindPopup(`<b style="font-family:'Noto Sans KR'">${weddingConfig.wedding.venueName}</b>`).openPopup();
 
             document.getElementById("naviNaverLink").href = weddingConfig.wedding.naviLinks.naver;
             document.getElementById("naviKakaoLink").href = weddingConfig.wedding.naviLinks.kakao;
@@ -1079,10 +1099,10 @@
             const createAccountRow = (title, accObj) => `
                 <div class="flex items-center justify-between font-sans text-xs py-1">
                     <div class="space-y-0.5">
-                        <p class="font-medium text-slate-800">${title} : <span class="text-winterBlue-500 font-round">${accObj.holder}</span></p>
+                        <p class="font-medium text-slate-800">${title} : <span class="text-winterBlue-600 font-semibold">${accObj.holder}</span></p>
                         <p class="text-slate-500">${accObj.bank} ${accObj.number}</p>
                     </div>
-                    <button onclick="copyToClipboard('${accObj.bank} ${accObj.number}', '${title} 계좌가 복사되었습니다! 💕')" class="px-3 py-1 rounded-full bg-white border border-winterBlue-200 text-winterBlue-600 hover:bg-winterBlue-50 transition-colors shadow-2xs font-round text-xs">
+                    <button onclick="copyToClipboard('${accObj.bank} ${accObj.number}', '${title} 계좌가 복사되었습니다! 💕')" class="px-3 py-1 rounded-full bg-white border border-winterBlue-200 text-winterBlue-600 hover:bg-winterBlue-50 transition-colors shadow-2xs font-sans font-medium text-xs">
                         복사
                     </button>
                 </div>
@@ -1130,7 +1150,7 @@
 
                 card.innerHTML = `
                     <div class="flex items-center justify-between">
-                        <span class="font-round text-slate-800 text-sm">${escapeHtml(item.name)}</span>
+                        <span class="font-semibold text-slate-800 text-sm">${escapeHtml(item.name)}</span>
                         <div class="flex items-center gap-2">
                             <span class="text-[10px] text-slate-400">${item.time}</span>
                             <button onclick="openDeleteModal(${item.id})" class="text-slate-300 hover:text-red-400 p-1">
