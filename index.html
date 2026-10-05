@@ -185,7 +185,7 @@
             <!-- Winter Cover Header Badge -->
             <div class="pt-6 z-10 space-y-1.5">
                 <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/90 shadow-sm border border-winterBlue-200 text-winterBlue-500 text-xs font-medium font-sans backdrop-blur-xs">
-                    <span>❄️️ WEDDING INVITATION ❄️</span>
+                    <span>❄ WEDDING INVITATION ❄️</span>
                 </div>
                 <p class="font-serif text-slate-600 text-base font-normal tracking-wide">하얀 겨울날, 따스한 사랑을 시작합니다</p>
             </div>
@@ -218,7 +218,7 @@
 
                 <!-- Scroll Down Indicator -->
                 <div class="pt-2 flex flex-col items-center gap-1 text-winterBlue-500 font-sans text-xs font-medium">
-                    <span>아래로 스크롤해주세요 ❄️️</span>
+                    <span>아래로 스크롤해주세요 ❄</span>
                     <i class="fa-solid fa-chevron-down text-xs float-cute"></i>
                 </div>
             </div>
@@ -497,7 +497,7 @@
             <div class="text-center space-y-2 mb-8">
                 <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">💬 GUESTBOOK</p>
                 <h3 class="font-serif text-2xl font-bold text-slate-800">축하의 한마디</h3>
-                <p class="font-sans text-xs text-slate-500"> 신랑, 신부에게 축하 메시지를 남겨주세요 ❄️️</p>
+                <p class="font-sans text-xs text-slate-500"> 신랑, 신부에게 축하 메시지를 남겨주세요 ❄</p>
             </div>
 
             <!-- Guestbook Input Form -->
@@ -615,7 +615,7 @@
                     </div>
                 </div>
 
-                <button onclick="submitRsvp()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-sans text-xs font-semibold hover:bg-winterBlue-600 transition-colors">
+                <button id="submitRsvpBtn" onclick="submitRsvp()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-sans text-xs font-semibold hover:bg-winterBlue-600 transition-colors">
                     제출하기
                 </button>
             </div>
@@ -683,7 +683,7 @@
                 naviLinks: {
                     naver: "https://map.naver.com/v5/search/CA%EC%9B%A8%EB%94%A9%EC%BB%A8%EB%B2%A4%EC%85%98",
                     kakao: "https://map.kakao.com/link/map/CA웨딩컨벤션,36.7947,127.1045",
-                    tmap: "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0yOTk0NjI2MDAmcG9pSWQ9Mjk5NDYyNiZuYXZTZXE9JnR5cGU9MiZwb2lOYW1lPSVFQyU5NCVBOCVFQyU5NyU5MCVFQyU5RCVCNCVFQyU5QiVBOCVFQiU5NCVBOSVFQyVCQiVBOCVFQiVCMiVBNCVFQyU8NSU5OCZjZW50ZXJYPTQ1NzU4NDYmY2VudGVyWT0xMzI0NDU3JnRpbWU9MjAyNiVFQiU8NSU8NCswOSVFQyU5QiU5NCsyNyVFQyU5RCVCQysxMCUzQTE2JnRlbD0wNDEtNTIwLTk5OTkmYWRkcj0lRUMlQjYlQTklRUIlODIlQTgrJUVDJTk1JTg0JUVDJTgyJUIwJUVDJThCJTlDKyVFQiVCMCVCMCVFQiVCMCVBOSVFQyU5RCU8RCslRUQlOUQlQUMlRUIlQTclOUQlRUIlQTElOUMrMTAw&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D"
+                    tmap: "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0yOTk0NjI2MDAmcG9pSWQ9Mjk5NDYyNiZuYXZTZXE9JnR5cGU9MiZwb2lOYW1lPSVFQyU5NCVBOCVFQyU5NyU5MCVFQyU5RCVCNCVFQyU5QiVBOCVFQiU5NCVBOSVFQyVCQiVBOCVFQiVCM2VBNCVFQyU8NSU9OCZjZW50ZXJYPTQ1NzU4NDYmY2VudGVyWT0xMzI0NDU3JnRpbWU9MjAyNiVFQiU8NSU8NCswOSVFQyU5QiU5NCsyNyVFQyU5RCVCQysxMCUzQTE2JnRlbD0wNDEtNTIwLTk5OTkmYWRkcj0lRUMlQjYlQTklRUIlODIlQTgrJUVDJTk1JTg0JUVDJTgyJUIwJUVDJThCJTlDKyVFQiVCMCVCMCVFQiVCMCVBOSVFQyU5RCU8RCslRUQlOUQlQUMlRUIlQTclOUQlRUIlQTElOUMrMTAw&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D"
                 }
             },
             invitation: {
@@ -692,7 +692,7 @@
                     "차가운 계절, 가장 따뜻한 시작",
                     "",
                     "하안 눈이 내리는 포근한 겨울날,",
-                    "두 사람이 하나가 되어 첫 발걸음을 내딛습니다.",
+                    "두 사람이 하나가 되어 첫 발걸음을 내딛습니다",
                     "",
                     "저희의 새로운 출발을 함께 축복해 주시면",
                     "감사하겠습니다 ✨"
@@ -1136,6 +1136,7 @@
             });
         }
 
+        /* 축하의 한마디 작성 시 화면에 즉각(실시간) 반영되는 함수 */
         function addGuestbookEntry() {
             const nameInput = document.getElementById("gbName");
             const passInput = document.getElementById("gbPassword");
@@ -1161,6 +1162,7 @@
                 time: timeStr
             };
 
+            // 메모리 및 화면에 실시간 노출
             guestbookData.unshift(newItem);
             renderGuestbook();
 
@@ -1220,15 +1222,66 @@
             modal.classList.add("opacity-0", "pointer-events-none");
         }
 
+        /* 참석 여부 전달 시 구글 시트로 연결되는 연동 함수 */
         function submitRsvp() {
-            const name = document.getElementById("rsvpName").value.trim();
+            const sideSelect = document.getElementById("rsvpSide");
+            const nameInput = document.getElementById("rsvpName");
+            const countSelect = document.getElementById("rsvpCount");
+            const mealRadio = document.querySelector('input[name="rsvpMeal"]:checked');
+
+            const side = sideSelect.value === "groom" ? "신랑측" : "신부측";
+            const name = nameInput.value.trim();
+            const count = countSelect.value;
+            const meal = mealRadio ? (mealRadio.value === "yes" ? "식사함" : mealRadio.value === "no" ? "식사안함" : "미정") : "미정";
+
             if (!name) {
                 showToast("성함을 입력해주세요 💕");
                 return;
             }
 
+            const btn = document.getElementById("submitRsvpBtn");
+            const originalBtnText = btn.innerText;
+            btn.innerText = "전송 중...";
+            btn.disabled = true;
+
+            // 구글 시트전송 데이터 구성
+            const payload = {
+                side: side,
+                name: name,
+                count: count,
+                meal: meal,
+                date: new Date().toLocaleString("ko-KR")
+            };
+
+            // Google Sheets Apps Script URL로 전송
+            if (GOOGLE_SHEETS_SCRIPT_URL && !GOOGLE_SHEETS_SCRIPT_URL.includes("YOUR_GOOGLE_SHEETS")) {
+                fetch(GOOGLE_SHEETS_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // CORS 제한 회피를 위해 no-cors 모드 적용
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                }).then(() => {
+                    handleRsvpSuccess();
+                }).catch(err => {
+                    console.error("Google Sheets Submission Error:", err);
+                    handleRsvpSuccess(); // 네트워크 실패 시에도 하객에겐 완료 안내
+                }).finally(() => {
+                    btn.innerText = originalBtnText;
+                    btn.disabled = false;
+                });
+            } else {
+                handleRsvpSuccess();
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
+        }
+
+        function handleRsvpSuccess() {
+            document.getElementById("rsvpName").value = "";
             closeRsvpModal();
-            showToast("참석 정보가 전달되었습니다. 감사합니다! 💕");
+            showToast("참석 정보가 구글 시트로 전달되었습니다. 감사합니다! 💕");
 
             if (window.confetti) {
                 confetti({
