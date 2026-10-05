@@ -175,54 +175,32 @@
         </div>
 
         <!-- ==========================================
-             SECTION 1: HERO COVER (WINTER LOVELY & UPDATED PHOTO TEXT)
+             SECTION 1: HERO COVER (CLEAN PHOTO & COUPLE NAMES)
              ========================================== -->
         <section id="hero" class="relative w-full h-[100vh] min-h-[660px] flex flex-col justify-between items-center text-center p-6 bg-gradient-to-b from-winterBlue-100/70 via-white to-cozyRose-50/60 fade-in-section is-visible">
             
             <!-- Winter Cover Header Badge -->
             <div class="pt-6 z-10 space-y-1.5">
                 <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/90 shadow-sm border border-winterBlue-200 text-winterBlue-500 text-xs font-medium font-sans backdrop-blur-xs">
-                    <span>❄️ WEDDING INVITATION ❄️</span>
+                    <span>❄️️ WEDDING INVITATION ❄️</span>
                 </div>
                 <p class="font-serif text-slate-600 text-base font-normal tracking-wide">하얀 겨울날, 따스한 사랑을 시작합니다</p>
             </div>
 
-            <!-- Hero Main Photo Frame with Cozy Winter Curved Frame & Styled Overlay -->
+            <!-- Hero Main Photo Frame (Cleaned of overlaid text) -->
             <div class="relative w-full my-auto py-2">
                 <div class="relative mx-auto w-[84%] aspect-[3/4] rounded-[2.8rem] overflow-hidden shadow-2xl border-4 border-white/95 group">
                     <img id="heroImage" src="https://lh3.googleusercontent.com/d/1gx3pFeuGzwY_VxNLdnxfqF28mPE6m1ck" 
                          alt="원승재 & 박지민 겨울 메인" 
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                          onerror="this.src='https://placehold.co/600x800/E1EFF7/3A7EA7?text=Winter+Wedding+♥'" />
-                    
-                    <!-- Dark Gradient Overlay for optimal legibility -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-black/20 to-slate-950/20"></div>
-                    
-                    <!-- Cute Arrow Annotations & Names (Swapped positions: Jimin on Left, Seungjae on Right) -->
-                    <!-- Left Pointer: Jimin -->
-                    <div class="absolute top-8 left-6 text-white text-left z-20 pointer-events-none">
-                        <span class="font-hand text-2xl font-bold tracking-wider text-white drop-shadow-md block -rotate-6">Jimin</span>
-                        <svg class="w-8 h-8 text-white stroke-current fill-none -mt-1 ml-3 drop-shadow-md" viewBox="0 0 50 50">
-                            <path d="M 10 5 Q 30 15 35 35" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
-                            <path d="M 28 30 L 35 35 L 36 26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
-                    </div>
+                </div>
 
-                    <!-- Right Pointer: Seungjae -->
-                    <div class="absolute top-8 right-6 text-white text-right z-20 pointer-events-none">
-                        <span class="font-hand text-2xl font-bold tracking-wider text-white drop-shadow-md block rotate-6">Seungjae</span>
-                        <svg class="w-8 h-8 text-white stroke-current fill-none -mt-1 mr-3 ml-auto drop-shadow-md" viewBox="0 0 50 50">
-                            <path d="M 40 5 Q 20 15 15 35" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
-                            <path d="M 22 26 L 15 35 L 22 32" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
-                    </div>
-
-                    <!-- Main Text Overlay (Korean names removed inside frame) -->
-                    <div class="absolute bottom-6 left-0 right-0 text-white z-20 px-3 text-center space-y-1">
-                        <h2 class="font-hand text-3xl sm:text-3.5xl text-white font-bold tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                            We're getting married!
-                        </h2>
-                    </div>
+                <!-- Text added directly below the main photo -->
+                <div class="pt-4 pb-1 text-center">
+                    <h2 id="heroCoupleNames" class="font-serif text-2xl sm:text-3xl font-bold text-slate-700 tracking-wider">
+                        원승재 & 박지민
+                    </h2>
                 </div>
             </div>
 
@@ -237,7 +215,7 @@
 
                 <!-- Scroll Down Indicator -->
                 <div class="pt-2 flex flex-col items-center gap-1 text-winterBlue-500 font-sans text-xs font-medium">
-                    <span>아래로 스크롤해주세요 ❄️</span>
+                    <span>아래로 스크롤해주세요 ❄️️</span>
                     <i class="fa-solid fa-chevron-down text-xs float-cute"></i>
                 </div>
             </div>
@@ -262,7 +240,7 @@
 
                 <div class="w-12 h-[2px] bg-winterBlue-200 mx-auto rounded-full"></div>
 
-                <!-- Invitation Message Text (Enhanced Readability) -->
+                <!-- Invitation Message Text -->
                 <div id="invitationBody" class="font-serif text-sm sm:text-base leading-loose text-slate-700 font-normal space-y-1 tracking-wide">
                     <!-- Populated by JS config -->
                 </div>
@@ -291,7 +269,7 @@
             <div class="max-w-xs mx-auto space-y-7">
                 <!-- Section Header -->
                 <div class="space-y-1">
-                    <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">❄️ WEDDING DAY ❄️️</p>
+                    <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">❄️ WEDDING DAY ❄</p>
                     <h3 id="calendarMonthHeader" class="font-serif text-2xl font-bold text-slate-800">2027년 1월</h3>
                 </div>
 
@@ -342,7 +320,7 @@
 
 
         <!-- ==========================================
-             SECTION 4: GALLERY (21 PHOTOS SUPPORT)
+             SECTION 4: GALLERY (15 PHOTOS SUPPORT)
              ========================================== -->
         <section id="gallery" class="px-6 py-16 bg-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
@@ -351,12 +329,12 @@
                 <p class="font-sans text-xs text-slate-500">사진을 터치하시면 크게 보실 수 있어요 ❄️</p>
             </div>
 
-            <!-- Thumbnail Grid (Default 9 visible, expands to all 15) -->
+            <!-- Thumbnail Grid -->
             <div id="galleryGrid" class="grid grid-cols-3 gap-2.5">
                 <!-- Populated dynamically -->
             </div>
 
-            <!-- Expand / Collapse Gallery Button for 15 photos -->
+            <!-- Expand / Collapse Gallery Button -->
             <div class="mt-6 text-center">
                 <button id="toggleGalleryBtn" onclick="toggleGalleryExpand()" class="px-6 py-3 rounded-full bg-winterBlue-50 hover:bg-winterBlue-100 border border-winterBlue-200 text-winterBlue-600 font-sans text-xs font-medium transition-all shadow-xs inline-flex items-center gap-2">
                     <span id="toggleGalleryBtnText">📷 사진 더보기</span>
@@ -365,7 +343,7 @@
             </div>
         </section>
 
-        <!-- Lightbox Modal for 15 Photos Navigation -->
+        <!-- Lightbox Modal for Photos Navigation -->
         <div id="lightboxModal" class="fixed inset-0 z-50 glass-modal flex flex-col justify-between p-4 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="flex justify-between items-center text-white px-2 pt-2">
                 <span id="lightboxCounter" class="font-sans text-sm tracking-widest opacity-90">1 / 15</span>
@@ -387,7 +365,7 @@
             </div>
 
             <div class="text-center pb-4 text-xs text-slate-300 font-sans">
-                <span>화면 좌우 스와이프 또는 화살표 버튼으로 다음 사진을 보세요 ❄️️</span>
+                <span>화면 좌우 스와이프 또는 화살표 버튼으로 다음 사진을 보세요 ❄</span>
             </div>
         </div>
 
@@ -516,7 +494,7 @@
             <div class="text-center space-y-2 mb-8">
                 <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">💬 GUESTBOOK</p>
                 <h3 class="font-serif text-2xl font-bold text-slate-800">축하의 한마디</h3>
-                <p class="font-sans text-xs text-slate-500">겨울날의 주인공 신랑, 신부에게 축하 메시지를 남겨주세요 ❄️</p>
+                <p class="font-sans text-xs text-slate-500">겨울날의 주인공 신랑, 신부에게 축하 메시지를 남겨주세요 ❄️️</p>
             </div>
 
             <!-- Guestbook Input Form -->
@@ -660,7 +638,7 @@
 
     <script>
         /* ==========================================================================
-           1. WEDDING CONFIGURATION (READABLE FONTS & HERO OVERLAY)
+           1. WEDDING CONFIGURATION
            ========================================================================== */
         const weddingConfig = {
             groom: {
@@ -710,7 +688,6 @@
                 ]
             },
 
-            /* Total 15 Photos Configured */
             gallery: [
                 { url: "https://lh3.googleusercontent.com/d/1lYWe-ds-um-TcZPIyMOl2o-MCIYWbDXK" },
                 { url: "https://lh3.googleusercontent.com/d/12TTFYVb0bAHTjrh36udZFof1LNSF8-V3" },
@@ -720,14 +697,13 @@
                 { url: "https://lh3.googleusercontent.com/d/1-0R_y7KbxRM7rA7Cvb1lvtl9chPKDcVn" },
                 { url: "https://lh3.googleusercontent.com/d/1Gd9CqatyHPFz_kMtdJJEItqOA866mYMZ" },
                 { url: "https://lh3.googleusercontent.com/d/1Uyz7tc4TtguSyOOeJYkhrWC5tHCFdiVx" },
-                { url: "https://lh3.googleusercontent.com/d/1udguOqW4Dj2JMky9ecUVGIcsA_-xDDfE" },
+                { url: "https://lh3.googleusercontent.com/d/1JKCaePqxAR263RuzmKbNAJrU_l6oiMUs" },
                 { url: "https://lh3.googleusercontent.com/d/17Ti17CiKORSN4w-Mib4avLBu-TldYSX0" },
                 { url: "https://lh3.googleusercontent.com/d/1cQotlEBWAe16SG6e5DH0hTyfhH0dmzZ_" },
                 { url: "https://lh3.googleusercontent.com/d/1N14EUbcWyzupqO2-OKlCPcrSuLIhDozU" },
                 { url: "https://lh3.googleusercontent.com/d/1wW9k_-3ce4T5CUBCJOeZMzNndtQfyagB" },
                 { url: "https://lh3.googleusercontent.com/d/1etZ0mdY6nP6JNqTfi6NM6HYU6-nCsQZj" },
                 { url: "https://lh3.googleusercontent.com/d/1HVPFRSEml4mdFjBiQAxsqud3rHRjtk-C" }
-                
             ]
         };
 
@@ -891,11 +867,10 @@
             }
         }
 
-        /* Render Hero & Invitation with High Readability */
         function renderHeroAndInvitation() {
             const heroCoupleElem = document.getElementById("heroCoupleNames");
             if (heroCoupleElem) {
-                heroCoupleElem.innerHTML = `${weddingConfig.groom.name} <span class="text-cozyRose-300">♥</span> ${weddingConfig.bride.name}`;
+                heroCoupleElem.innerText = "원승재 ❤️박지민";
             }
             document.getElementById("heroDateText").innerText = "2027년 1월 31일 일요일 오후 1:00";
             document.getElementById("heroVenueText").innerText = weddingConfig.wedding.venueName;
@@ -970,7 +945,6 @@
             setInterval(updateTimer, 1000);
         }
 
-        /* 15 Photos Gallery */
         function renderGallery() {
             const grid = document.getElementById("galleryGrid");
             grid.innerHTML = "";
