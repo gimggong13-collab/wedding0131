@@ -643,9 +643,9 @@
         /* ==========================================================================
            1. 연동 설정 정보 (이 부분을 본인의 Supabase 및 Google URL로 채워주세요)
            ========================================================================== */
-        const SUPABASE_URL = "https://YOUR_SUPABASE_PROJECT_ID.supabase.co"; // https://ghxwhwwcjubyvdovzeqd.supabase.co
-        const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";                 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdoeHdod3djanVieXZkb3Z6ZXFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEyMDUyNjAsImV4cCI6MjEwNjc4MTI2MH0.8LvVPnGr5xl0lFK3NVncXF4u7QaEm5KZy60NHFJYE6g
-        const GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec"; // https://script.google.com/macros/s/AKfycbyspl4u50cJXT7O0b5WTD3ev79OHcDPKE6osKbWNsMWgcInjMjzxf7uYGP6VHrfsXvX/exec
+        const SUPABASE_URL = "https://ghxwhwwcjubyvdovzeqd.supabase.co"; // 
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdoeHdod3djanVieXZkb3Z6ZXFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEyMDUyNjAsImV4cCI6MjEwNjc4MTI2MH0.8LvVPnGr5xl0lFK3NVncXF4u7QaEm5KZy60NHFJYE6g";                 // 
+        const GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyspl4u50cJXT7O0b5WTD3ev79OHcDPKE6osKbWNsMWgcInjMjzxf7uYGP6VHrfsXvX/execc"; // 
 
         const supabaseClient = (typeof supabase !== 'undefined' && !SUPABASE_URL.includes("YOUR_SUPABASE")) 
             ? supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) 
