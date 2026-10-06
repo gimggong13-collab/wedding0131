@@ -11,7 +11,7 @@
     <meta property="og:description" content="2027년 1월 31일 일요일 오후 1시, 저희 두 사람의 따뜻한 첫걸음에 초대합니다!✨">
     <meta property="og:image" content="https://lh3.googleusercontent.com/d/1Y1M6lRyKfICANaj_ehwYT0taMHcpkTup">
 
-    <!-- Highly Readable Korean & Handwritten Fonts: Gowun Batang, Noto Sans KR, Gowun Dodum, Patrick Hand -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -78,7 +78,6 @@
             overflow-x: hidden;
         }
 
-        /* Mobile Container Frame with subtle winter gradient glow */
         .mobile-frame {
             max-width: 430px;
             margin: 0 auto;
@@ -88,7 +87,6 @@
             position: relative;
         }
 
-        /* Falling Snow Canvas overlay */
         #snowCanvas {
             position: fixed;
             top: 0;
@@ -101,7 +99,6 @@
             z-index: 30;
         }
 
-        /* Smooth Fade In Animations */
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
@@ -114,7 +111,6 @@
             transform: translateY(0);
         }
 
-        /* Gentle Floating Animation */
         @keyframes gentleFloat {
             0%, 100% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-7px) rotate(3deg); }
@@ -124,7 +120,6 @@
             animation: gentleFloat 2.5s infinite ease-in-out;
         }
 
-        /* Accordion transition */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -137,7 +132,6 @@
             opacity: 1;
         }
 
-        /* Lightbox Glass Modal */
         .glass-modal {
             background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(8px);
@@ -158,18 +152,14 @@
 </head>
 <body>
 
-    <!-- Main Mobile Frame Container -->
     <div class="mobile-frame relative flex flex-col justify-between overflow-hidden bg-gradient-to-b from-winterBlue-50 via-white to-cozyRose-50">
 
-        <!-- Background Canvas for Falling Snowflakes -->
         <canvas id="snowCanvas"></canvas>
 
-        <!-- Floating Audio Control Button -->
         <button id="bgmToggleBtn" onclick="toggleBgm()" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-winterBlue-200 flex items-center justify-center text-winterBlue-500 hover:bg-winterBlue-50 transition-all duration-300" title="배경음악 재생/정지">
             <i id="bgmIcon" class="fa-solid fa-snowflake text-base animate-spin" style="animation-duration: 8s;"></i>
         </button>
 
-        <!-- Global Toast Notification UI -->
         <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-10px]">
             <div class="bg-winterBlue-500 text-white px-5 py-2.5 rounded-full shadow-xl text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2 font-sans border border-winterBlue-300">
                 <i class="fa-solid fa-snowflake text-warmGold"></i>
@@ -177,12 +167,8 @@
             </div>
         </div>
 
-        <!-- ==========================================
-             SECTION 1: HERO COVER (CLEAN PHOTO & COUPLE NAMES)
-             ========================================== -->
+        <!-- SECTION 1: HERO COVER -->
         <section id="hero" class="relative w-full h-[100vh] min-h-[660px] flex flex-col justify-between items-center text-center p-6 bg-gradient-to-b from-winterBlue-100/70 via-white to-cozyRose-50/60 fade-in-section is-visible">
-            
-            <!-- Winter Cover Header Badge -->
             <div class="pt-6 z-10 space-y-1.5">
                 <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/90 shadow-sm border border-winterBlue-200 text-winterBlue-500 text-xs font-medium font-sans backdrop-blur-xs">
                     <span>❄ WEDDING INVITATION ❄️</span>
@@ -190,7 +176,6 @@
                 <p class="font-serif text-slate-600 text-base font-normal tracking-wide">하얀 겨울날, 따스한 사랑을 시작합니다</p>
             </div>
 
-            <!-- Hero Main Photo Frame (Cleaned of overlaid text) -->
             <div class="relative w-full my-auto py-2">
                 <div class="relative mx-auto w-[84%] aspect-[3/4] rounded-[2.8rem] overflow-hidden shadow-2xl border-4 border-white/95 group">
                     <img id="heroImage" src="https://lh3.googleusercontent.com/d/1gx3pFeuGzwY_VxNLdnxfqF28mPE6m1ck" 
@@ -198,8 +183,6 @@
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                          onerror="this.src='https://placehold.co/600x800/E1EFF7/3A7EA7?text=Winter+Wedding+♥'" />
                 </div>
-
-                <!-- Text added directly below the main photo -->
                 <div class="pt-4 pb-1 text-center">
                     <h2 id="heroCoupleNames" class="font-serif text-2xl sm:text-3xl font-bold text-slate-700 tracking-wider">
                         원승재 & 박지민
@@ -207,7 +190,6 @@
                 </div>
             </div>
 
-            <!-- Cover Bottom Date & Venue Summary -->
             <div class="pb-6 z-10 space-y-2">
                 <p id="heroDateText" class="font-sans font-semibold text-slate-1000 text-base tracking-wide">
                     2027년 1월 31일 일요일 오후 1:00
@@ -215,8 +197,6 @@
                 <p id="heroVenueText" class="font-sans text-xs text-slate-800 font-medium">
                     천안아산역 CA웨딩컨벤션 2층
                 </p>
-
-                <!-- Scroll Down Indicator -->
                 <div class="pt-2 flex flex-col items-center gap-1 text-winterBlue-500 font-sans text-xs font-medium">
                     <span>아래로 스크롤해주세요 ❄</span>
                     <i class="fa-solid fa-chevron-down text-xs float-cute"></i>
@@ -224,31 +204,17 @@
             </div>
         </section>
 
-
-        <!-- ==========================================
-             SECTION 2: INVITATION STATEMENT
-             ========================================== -->
+        <!-- SECTION 2: INVITATION STATEMENT -->
         <section id="invitation" class="px-7 py-16 bg-white text-center fade-in-section relative">
             <div class="max-w-xs mx-auto space-y-7">
-                
-                <!-- Cute Winter Tag -->
                 <div class="inline-block px-4 py-1.5 bg-winterBlue-50 rounded-full text-xs text-winterBlue-600 font-medium font-sans border border-winterBlue-200">
                     💌 초대의 글
                 </div>
-
-                <!-- Main Title with Clean Readable Serif -->
                 <h2 id="invitationTitle" class="font-serif text-xl sm:text-2xl font-bold leading-relaxed text-slate-800 tracking-wide">
-                    하얀 겨울 햇살처럼<br/>포근하게 살겠습니다 ❄️
+                    하얀 겨울 햇살처럼<br/>포근하게 살겠습니다 ❄️️
                 </h2>
-
                 <div class="w-12 h-[2px] bg-winterBlue-200 mx-auto rounded-full"></div>
-
-                <!-- Invitation Message Text -->
-                <div id="invitationBody" class="font-serif text-sm sm:text-base leading-loose text-slate-700 font-normal space-y-1 tracking-wide">
-                    <!-- Populated by JS config -->
-                </div>
-
-                <!-- Parents & Relation Box -->
+                <div id="invitationBody" class="font-serif text-sm sm:text-base leading-loose text-slate-700 font-normal space-y-1 tracking-wide"></div>
                 <div class="pt-6 border-t border-winterBlue-100 space-y-3 font-sans text-xs text-slate-700 bg-winterBlue-50/40 p-5 rounded-3xl border border-winterBlue-100/60">
                     <div class="flex justify-center items-center gap-2">
                         <span class="font-medium" id="groomParentsText">원상규 · 봉주현</span>
@@ -264,19 +230,14 @@
             </div>
         </section>
 
-
-        <!-- ==========================================
-             SECTION 3: DATE & COUNTDOWN
-             ========================================== -->
+        <!-- SECTION 3: DATE & COUNTDOWN -->
         <section id="calendar" class="px-6 py-16 bg-gradient-to-b from-winterBlue-50/50 to-cozyRose-50/30 border-t border-winterBlue-100 text-center fade-in-section">
             <div class="max-w-xs mx-auto space-y-7">
-                <!-- Section Header -->
                 <div class="space-y-1">
                     <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">❄️ WEDDING DAY ❄</p>
                     <h3 id="calendarMonthHeader" class="font-serif text-2xl font-bold text-slate-800">2027년 1월</h3>
                 </div>
 
-                <!-- Calendar Card -->
                 <div class="bg-white/90 p-6 rounded-[2.2rem] shadow-sm border border-winterBlue-100 backdrop-blur-xs">
                     <div class="grid grid-cols-7 gap-2 text-xs font-medium font-sans text-slate-400 pb-3 border-b border-winterBlue-100">
                         <span class="text-cozyRose-400">일</span>
@@ -287,18 +248,13 @@
                         <span>금</span>
                         <span class="text-winterBlue-400">토</span>
                     </div>
-
-                    <div id="calendarGrid" class="grid grid-cols-7 gap-y-3 gap-x-2 text-xs font-sans text-slate-700 pt-3">
-                        <!-- Populated by JS -->
-                    </div>
+                    <div id="calendarGrid" class="grid grid-cols-7 gap-y-3 gap-x-2 text-xs font-sans text-slate-700 pt-3"></div>
                 </div>
 
-                <!-- Real-time Countdown Timer -->
                 <div class="bg-white/90 p-5 rounded-[2.2rem] shadow-sm border border-winterBlue-100 space-y-3">
                     <p id="countdownMessage" class="font-sans text-sm font-medium text-slate-700">
                         승재 <span class="text-cozyRose-400">♥</span> 지민의 예식이 <span id="daysLeftNum" class="font-bold text-winterBlue-600 text-lg">0</span>일 남았습니다! ☃️
                     </p>
-
                     <div class="grid grid-cols-4 gap-2 text-center font-sans">
                         <div class="bg-winterBlue-50 p-2.5 rounded-2xl border border-winterBlue-100">
                             <span id="cdDays" class="block text-lg font-bold text-winterBlue-600">00</span>
@@ -321,23 +277,14 @@
             </div>
         </section>
 
-
-        <!-- ==========================================
-             SECTION 4: GALLERY (15 PHOTOS SUPPORT)
-             ========================================== -->
+        <!-- SECTION 4: GALLERY -->
         <section id="gallery" class="px-6 py-16 bg-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
                 <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">📸 GALLERY</p>
                 <h3 class="font-serif text-2xl font-bold text-slate-800">우리의 예쁜 순간들</h3>
                 <p class="font-sans text-xs text-slate-500">사진을 터치하시면 크게 보실 수 있어요 ❄️</p>
             </div>
-
-            <!-- Thumbnail Grid -->
-            <div id="galleryGrid" class="grid grid-cols-3 gap-2.5">
-                <!-- Populated dynamically -->
-            </div>
-
-            <!-- Expand / Collapse Gallery Button -->
+            <div id="galleryGrid" class="grid grid-cols-3 gap-2.5"></div>
             <div class="mt-6 text-center">
                 <button id="toggleGalleryBtn" onclick="toggleGalleryExpand()" class="px-6 py-3 rounded-full bg-winterBlue-50 hover:bg-winterBlue-100 border border-winterBlue-200 text-winterBlue-600 font-sans text-xs font-medium transition-all shadow-xs inline-flex items-center gap-2">
                     <span id="toggleGalleryBtnText">📷 사진 더보기</span>
@@ -346,7 +293,7 @@
             </div>
         </section>
 
-        <!-- Lightbox Modal for Photos Navigation -->
+        <!-- Lightbox Modal -->
         <div id="lightboxModal" class="fixed inset-0 z-50 glass-modal flex flex-col justify-between p-4 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="flex justify-between items-center text-white px-2 pt-2">
                 <span id="lightboxCounter" class="font-sans text-sm tracking-widest opacity-90">1 / 15</span>
@@ -354,40 +301,29 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-
             <div class="relative my-auto flex items-center justify-center w-full h-[75vh]">
                 <button onclick="prevGalleryImage()" class="absolute left-1 z-10 w-11 h-11 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/80 transition-colors">
                     <i class="fa-solid fa-chevron-left text-sm"></i>
                 </button>
-                
                 <img id="lightboxImage" src="" alt="확대 보기" class="max-h-full max-w-full object-contain rounded-2xl shadow-2xl transition-transform duration-300" />
-                
                 <button onclick="nextGalleryImage()" class="absolute right-1 z-10 w-11 h-11 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/80 transition-colors">
                     <i class="fa-solid fa-chevron-right text-sm"></i>
                 </button>
             </div>
-
             <div class="text-center pb-4 text-xs text-slate-300 font-sans">
                 <span> 화살표 버튼으로 다음 사진을 확인해 주세요 ❄</span>
             </div>
         </div>
 
-
-        <!-- ==========================================
-             SECTION 5: MAP & LOCATION
-             ========================================== -->
+        <!-- SECTION 5: MAP & LOCATION -->
         <section id="location" class="px-6 py-16 bg-winterBlue-50/30 border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
                 <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">📍 LOCATION</p>
                 <h3 id="locationVenueTitle" class="font-serif text-2xl font-bold text-slate-800">오시는 길</h3>
                 <p id="locationAddressText" class="font-sans text-xs text-slate-600">충남 아산시 배방읍 희망로 100</p>
             </div>
-
-            <!-- Map Container -->
             <div class="bg-white p-4 rounded-[2.2rem] shadow-sm border border-winterBlue-100 space-y-4">
                 <div id="map" class="w-full h-64 rounded-2xl overflow-hidden border border-winterBlue-100"></div>
-
-                <!-- Address & Copy Button -->
                 <div class="flex items-center justify-between px-1 py-1 text-xs">
                     <div class="space-y-0.5">
                         <p class="font-sans font-semibold text-slate-800 text-sm" id="mapHallDetailText">천안아산역 CA웨딩컨벤션 2층</p>
@@ -398,8 +334,6 @@
                         <span>주소 복사</span>
                     </button>
                 </div>
-
-                <!-- Navigation App Links -->
                 <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100 font-sans font-medium">
                     <a id="naviNaverLink" href="#" target="_blank" class="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-2xl bg-emerald-50 text-emerald-700 text-xs border border-emerald-200/60 hover:bg-emerald-100 transition-colors">
                         <i class="fa-solid fa-map-location-dot"></i>
@@ -416,7 +350,6 @@
                 </div>
             </div>
 
-            <!-- Transport Details -->
             <div class="mt-6 space-y-3 bg-white p-5 rounded-[2.2rem] shadow-sm border border-winterBlue-100 text-xs leading-relaxed text-slate-600 font-sans">
                 <div class="space-y-1">
                     <div class="flex items-center gap-2 font-semibold text-slate-800 text-sm">
@@ -444,55 +377,37 @@
             </div>
         </section>
 
-
-        <!-- ==========================================
-             SECTION 6: ACCOUNTS & REMITTANCE
-             ========================================== -->
+        <!-- SECTION 6: ACCOUNTS & REMITTANCE -->
         <section id="accounts" class="px-6 py-16 bg-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
-                <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">  </p>
                 <h3 class="font-serif text-2xl font-bold text-slate-800">마음 전하실 곳</h3>
                 <p class="font-sans text-xs text-slate-500 leading-relaxed">
                     참석이 어려우신 분들을 위해<br/>계좌번호를 기재하였습니다. 넓은 양해 부탁드립니다.
                 </p>
             </div>
-
-            <!-- Accordion Group -->
             <div class="space-y-3 max-w-sm mx-auto font-sans">
-                <!-- Groom Side Accordion -->
                 <div class="bg-winterBlue-50/40 rounded-3xl border border-winterBlue-100 overflow-hidden">
                     <button onclick="toggleAccordion('groomAccounts')" class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-winterBlue-100/50 transition-colors">
                         <span class="text-sm font-semibold text-slate-800">💙 신랑측 계좌번호 보기</span>
                         <i id="groomAccountsIcon" class="fa-solid fa-chevron-down text-xs text-winterBlue-400 transition-transform duration-300"></i>
                     </button>
-                    
                     <div id="groomAccounts" class="accordion-content px-5 pb-4 space-y-3">
-                        <div class="pt-2 border-t border-winterBlue-100 space-y-3" id="groomAccountsList">
-                            <!-- Populated dynamically -->
-                        </div>
+                        <div class="pt-2 border-t border-winterBlue-100 space-y-3" id="groomAccountsList"></div>
                     </div>
                 </div>
-
-                <!-- Bride Side Accordion -->
                 <div class="bg-cozyRose-50/40 rounded-3xl border border-cozyRose-100 overflow-hidden">
                     <button onclick="toggleAccordion('brideAccounts')" class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-cozyRose-100/50 transition-colors">
                         <span class="text-sm font-semibold text-slate-800">💖 신부측 계좌번호 보기</span>
                         <i id="brideAccountsIcon" class="fa-solid fa-chevron-down text-xs text-cozyRose-400 transition-transform duration-300"></i>
                     </button>
-                    
                     <div id="brideAccounts" class="accordion-content px-5 pb-4 space-y-3">
-                        <div class="pt-2 border-t border-cozyRose-100 space-y-3" id="brideAccountsList">
-                            <!-- Populated dynamically -->
-                        </div>
+                        <div class="pt-2 border-t border-cozyRose-100 space-y-3" id="brideAccountsList"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- ==========================================
-             SECTION 7: GUESTBOOK & MESSAGES
-             ========================================== -->
+        <!-- SECTION 7: GUESTBOOK & MESSAGES -->
         <section id="guestbook" class="px-6 py-16 bg-gradient-to-b from-winterBlue-50/30 to-white border-t border-winterBlue-100 fade-in-section">
             <div class="text-center space-y-2 mb-8">
                 <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">💬 GUESTBOOK</p>
@@ -500,7 +415,6 @@
                 <p class="font-sans text-xs text-slate-500"> 신랑, 신부에게 축하 메시지를 남겨주세요 ❄</p>
             </div>
 
-            <!-- Guestbook Input Form -->
             <div class="bg-white p-5 rounded-[2.2rem] shadow-sm border border-winterBlue-100 mb-6 space-y-3">
                 <div class="grid grid-cols-2 gap-2 font-sans">
                     <input type="text" id="gbName" placeholder="성함" class="w-full px-3.5 py-2.5 text-xs border border-winterBlue-200 rounded-2xl focus:outline-none focus:border-winterBlue-400 bg-winterBlue-50/20">
@@ -513,20 +427,12 @@
                 </button>
             </div>
 
-            <!-- Guestbook Comments List -->
-            <div id="guestbookList" class="space-y-3">
-                <!-- Rendered dynamically -->
-            </div>
+            <div id="guestbookList" class="space-y-3"></div>
         </section>
 
-
-        <!-- ==========================================
-             SECTION 8: SHARE & RSVP
-             ========================================== -->
+        <!-- SECTION 8: SHARE & RSVP -->
         <section id="share" class="px-6 py-16 bg-white border-t border-winterBlue-100 text-center fade-in-section">
             <div class="max-w-xs mx-auto space-y-6">
-                
-                <!-- RSVP Card -->
                 <div class="p-6 rounded-[2.2rem] bg-gradient-to-br from-winterBlue-50 to-cozyRose-50 border border-winterBlue-100 space-y-3">
                     <i class="fa-solid fa-envelope-open-text text-3xl text-winterBlue-400 float-cute"></i>
                     <h4 class="font-serif text-lg font-bold text-slate-800">참석 여부 전달하기</h4>
@@ -538,7 +444,6 @@
                     </button>
                 </div>
 
-                <!-- Share Buttons -->
                 <div class="space-y-3 pt-4">
                     <p class="font-sans text-xs text-slate-500">청첩장 공유하기</p>
                     <div class="grid grid-cols-2 gap-2.5 font-sans font-medium">
@@ -553,7 +458,6 @@
                     </div>
                 </div>
 
-                <!-- OG Card Preview Badge -->
                 <div class="pt-4 text-left bg-winterBlue-50/50 p-3.5 rounded-2xl border border-winterBlue-100 flex items-center gap-3">
                     <img id="ogPreviewImage" src="https://lh3.googleusercontent.com/d/1Y1M6lRyKfICANaj_ehwYT0taMHcpkTup" class="w-12 h-12 rounded-xl object-cover" alt="OG Thumbnail">
                     <div class="overflow-hidden space-y-0.5">
@@ -563,18 +467,12 @@
                 </div>
             </div>
 
-            <!-- Footer -->
             <footer class="pt-10 pb-4 text-center font-serif text-xs text-winterBlue-400 space-y-1">
                 <p class="text-sm font-semibold">원승재 ♥ 박지민</p>
                 <p class="font-sans text-[10px] opacity-70">© 2027 by seungjae & jimin. </p>
             </footer>
         </section>
 
-
-        <!-- ==========================================
-             MODALS: RSVP & DELETE
-             ========================================== -->
-        
         <!-- RSVP Modal -->
         <div id="rsvpModal" class="fixed inset-0 z-50 glass-modal flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="bg-white w-full max-w-xs rounded-[2.2rem] p-6 space-y-4 text-center shadow-2xl relative border border-winterBlue-100">
@@ -615,13 +513,13 @@
                     </div>
                 </div>
 
-                <button id="submitRsvpBtn" onclick="submitRsvp()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-sans text-xs font-semibold hover:bg-winterBlue-600 transition-colors">
+                <button onclick="submitRsvp()" class="w-full py-2.5 rounded-2xl bg-winterBlue-500 text-white font-sans text-xs font-semibold hover:bg-winterBlue-600 transition-colors">
                     제출하기
                 </button>
             </div>
         </div>
 
-        <!-- Password Modal for Guestbook Delete -->
+        <!-- Delete Guestbook Modal -->
         <div id="deleteModal" class="fixed inset-0 z-50 glass-modal flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="bg-white w-full max-w-xs rounded-[2.2rem] p-5 space-y-4 text-center shadow-2xl relative">
                 <h4 class="font-serif text-base font-bold text-slate-800">메시지 삭제</h4>
@@ -638,21 +536,18 @@
 
     </div>
 
-
     <script>
         /* ==========================================================================
-           1. 연동 설정 정보 (이 부분을 본인의 Supabase 및 Google URL로 채워주세요)
+           1. 연동 설정 정보
            ========================================================================== */
-        const SUPABASE_URL = "https://ghxwhwwcjubyvdovzeqd.supabase.co"; // 
-        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdoeHdod3djanVieXZkb3Z6ZXFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEyMDUyNjAsImV4cCI6MjEwNjc4MTI2MH0.8LvVPnGr5xl0lFK3NVncXF4u7QaEm5KZy60NHFJYE6g";                 // 
-        const GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxpQWa_cb8GkcSbzE22K-ezeS_uQKme4snTMMyDrC6sFu8_wGPUYpB5XfPnv8g4MEV/exec"; // 
+        const SUPABASE_URL = "https://ghxwhwwcjubyvdovzeqd.supabase.co"; 
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdoeHdod3djanVieXZkb3Z6ZXFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEyMDUyNjAsImV4cCI6MjEwNjc4MTI2MH0.8LvVPnGr5xl0lFK3NVncXF4u7QaEm5KZy60NHFJYE6g"; 
+        const GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxpQWa_cb8GkcSbzE22K-ezeS_uQKme4snTMMyDrC6sFu8_wGPUYpB5XfPnv8g4MEV/exec"; 
 
-        const supabaseClient = (typeof supabase !== 'undefined' && !SUPABASE_URL.includes("YOUR_SUPABASE")) 
+        const supabaseClient = (typeof supabase !== 'undefined' && SUPABASE_URL && !SUPABASE_URL.includes("YOUR_SUPABASE")) 
             ? supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) 
             : null;
-        /* ==========================================================================
-           1. WEDDING CONFIGURATION
-           ========================================================================== */
+
         const weddingConfig = {
             groom: {
                 name: "원승재",
@@ -683,7 +578,7 @@
                 naviLinks: {
                     naver: "https://map.naver.com/v5/search/CA%EC%9B%A8%EB%94%A9%EC%BB%A8%EB%B2%A4%EC%85%98",
                     kakao: "https://map.kakao.com/link/map/CA웨딩컨벤션,36.7947,127.1045",
-                    tmap: "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0yOTk0NjI2MDAmcG9pSWQ9Mjk5NDYyNiZuYXZTZXE9JnR5cGU9MiZwb2lOYW1lPSVFQyU5NCVBOCVFQyU5NyU5MCVFQyU5RCVCNCVFQyU5QiVBOCVFQiU5NCVBOSVFQyVCQiVBOCVFQiVCM2VBNCVFQyU8NSU9OCZjZW50ZXJYPTQ1NzU4NDYmY2VudGVyWT0xMzI0NDU3JnRpbWU9MjAyNiVFQiU8NSU8NCswOSVFQyU5QiU5NCsyNyVFQyU5RCVCQysxMCUzQTE2JnRlbD0wNDEtNTIwLTk5OTkmYWRkcj0lRUMlQjYlQTklRUIlODIlQTgrJUVDJTk1JTg0JUVDJTgyJUIwJUVDJThCJTlDKyVFQiVCMCVCMCVFQiVCMCVBOSVFQyU5RCU8RCslRUQlOUQlQUMlRUIlQTclOUQlRUIlQTElOUMrMTAw&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D"
+                    tmap: "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0yOTk0NjI2MDAmcG9pSWQ9Mjk5NDYyNiZuYXZTZXE9JnR5cGU9MiZwb2lOYW1lPSVFQyU5NCVBOCVFQyU5NyU5MCVFQyU5RCVCNCVFQyU5QiVBOCVFQiU5NCVBOSVFQyVCQiVBOCVFQiVCMiVBNCVFQyU8NSU5OCZjZW50ZXJYPTQ1NzU4NDYmY2VudGVyWT0xMzI0NDU3JnRpbWU9MjAyNiVFQiU8NSU8NCswOSVFQyU5QiU5NCsyNyVFQyU5RCVCQysxMCUzQTE2JnRlbD0wNDEtNTIwLTk5OTkmYWRkcj0lRUMlQjYlQTklRUIlODIlQTgrJUVDJTk1JTg0JUVDJTgyJUIwJUVDJThCJTlDKyVFQiVCMCVCMCVFQiVCMCVBOSVFQyU5RCU8RCslRUQlOUQlQUMlRUIlQTclOUQlRUIlQTElOUMrMTAw&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D"
                 }
             },
             invitation: {
@@ -692,13 +587,13 @@
                     "차가운 계절, 가장 따뜻한 시작",
                     "",
                     "하안 눈이 내리는 포근한 겨울날,",
-                    "두 사람이 하나가 되어 첫 발걸음을 내딛습니다",
+                    "두 사람이 하나가 되어",
+                    "첫 발걸음을 내딛습니다.",
                     "",
                     "저희의 새로운 출발을 함께 축복해 주시면",
                     "감사하겠습니다 ✨"
                 ]
             },
-
             gallery: [
                 { url: "https://lh3.googleusercontent.com/d/1lYWe-ds-um-TcZPIyMOl2o-MCIYWbDXK" },
                 { url: "https://lh3.googleusercontent.com/d/12TTFYVb0bAHTjrh36udZFof1LNSF8-V3" },
@@ -718,12 +613,7 @@
             ]
         };
 
-        /* Guestbook Initial Items */
-        let guestbookData = [
-            { id: 1, name: "박지민", message: "저희의 결혼식에 함께 해주셔서 너무 감사합니다! 💕", time: "2026.10.20 14:20", pass: "1020" },
-            { id: 2, name: "원승재", message: "행복하게 잘 살겠습니다 ❄️✨", time: "2026.10.20 08:14", pass: "0814" }
-        ];
-
+        let guestbookData = [];
         let currentLightboxIndex = 0;
         let activeDeleteId = null;
         let isBgmPlaying = false;
@@ -738,8 +628,11 @@
             renderGallery();
             initMap();
             renderAccounts();
-            renderGuestbook();
             initBgm();
+            
+            // Supabase 연동 방명록 불러오기 및 실시간 구독
+            fetchGuestbook();
+            subscribeGuestbookRealtime();
         });
 
         /* Snowfall Animation */
@@ -879,10 +772,7 @@
         }
 
         function renderHeroAndInvitation() {
-            const heroCoupleElem = document.getElementById("heroCoupleNames");
-            if (heroCoupleElem) {
-                heroCoupleElem.innerText = "원승재 & 박지민";
-            }
+            document.getElementById("heroCoupleNames").innerText = "원승재 & 박지민";
             document.getElementById("heroDateText").innerText = "2027년 1월 31일 일요일 오후 1:00";
             document.getElementById("heroVenueText").innerText = weddingConfig.wedding.venueName;
 
@@ -1107,6 +997,35 @@
             }
         }
 
+        /* ==========================================================================
+           SUPABASE REALTIME GUESTBOOK INTEGRATION
+           ========================================================================== */
+        async function fetchGuestbook() {
+            if (!supabaseClient) return;
+            const { data, error } = await supabaseClient
+                .from('guestbook')
+                .select('*')
+                .order('created_at', { ascending: false });
+
+            if (error) {
+                console.error("Guestbook fetch error:", error);
+                return;
+            }
+
+            guestbookData = data || [];
+            renderGuestbook();
+        }
+
+        function subscribeGuestbookRealtime() {
+            if (!supabaseClient) return;
+            supabaseClient
+                .channel('realtime_guestbook_channel')
+                .on('postgres_changes', { event: '*', schema: 'public', table: 'guestbook' }, () => {
+                    fetchGuestbook();
+                })
+                .subscribe();
+        }
+
         function renderGuestbook() {
             const list = document.getElementById("guestbookList");
             list.innerHTML = "";
@@ -1117,6 +1036,11 @@
             }
 
             guestbookData.forEach(item => {
+                const dateObj = new Date(item.created_at);
+                const formattedTime = !isNaN(dateObj) 
+                    ? `${dateObj.getFullYear()}.${String(dateObj.getMonth()+1).padStart(2,'0')}.${String(dateObj.getDate()).padStart(2,'0')} ${String(dateObj.getHours()).padStart(2,'0')}:${String(dateObj.getMinutes()).padStart(2,'0')}`
+                    : '';
+
                 const card = document.createElement("div");
                 card.className = "bg-white p-4 rounded-2xl shadow-2xs border border-winterBlue-100 text-xs space-y-1.5 relative font-sans";
 
@@ -1124,7 +1048,7 @@
                     <div class="flex items-center justify-between">
                         <span class="font-semibold text-slate-800 text-sm">${escapeHtml(item.name)}</span>
                         <div class="flex items-center gap-2">
-                            <span class="text-[10px] text-slate-400">${item.time}</span>
+                            <span class="text-[10px] text-slate-400">${formattedTime}</span>
                             <button onclick="openDeleteModal(${item.id})" class="text-slate-300 hover:text-red-400 p-1">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
@@ -1136,8 +1060,7 @@
             });
         }
 
-        /* 축하의 한마디 작성 시 화면에 즉각(실시간) 반영되는 함수 */
-        function addGuestbookEntry() {
+        async function addGuestbookEntry() {
             const nameInput = document.getElementById("gbName");
             const passInput = document.getElementById("gbPassword");
             const msgInput = document.getElementById("gbMessage");
@@ -1151,26 +1074,27 @@
                 return;
             }
 
-            const now = new Date();
-            const timeStr = `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+            if (!supabaseClient) {
+                showToast("Supabase 연결 설정을 확인해주세요.");
+                return;
+            }
 
-            const newItem = {
-                id: Date.now(),
-                name: name,
-                pass: pass,
-                message: msg,
-                time: timeStr
-            };
+            const { error } = await supabaseClient
+                .from('guestbook')
+                .insert([{ name: name, password: pass, message: msg }]);
 
-            // 메모리 및 화면에 실시간 노출
-            guestbookData.unshift(newItem);
-            renderGuestbook();
+            if (error) {
+                console.error("Error inserting guestbook:", error);
+                showToast("메시지 저장 중 오류가 발생했습니다.");
+                return;
+            }
 
             nameInput.value = "";
             passInput.value = "";
             msgInput.value = "";
 
             showToast("축하 메시지가 등록되었습니다! ✨");
+            fetchGuestbook();
         }
 
         function openDeleteModal(id) {
@@ -1187,7 +1111,7 @@
             modal.classList.add("opacity-0", "pointer-events-none");
         }
 
-        function confirmDeleteGuestbook() {
+        async function confirmDeleteGuestbook() {
             const passInput = document.getElementById("deletePasswordInput").value.trim();
             const item = guestbookData.find(g => g.id === activeDeleteId);
 
@@ -1196,20 +1120,29 @@
                 return;
             }
 
-            if (item.pass === passInput) {
-                guestbookData = guestbookData.filter(g => g.id !== activeDeleteId);
-                renderGuestbook();
-                closeDeleteModal();
-                showToast("메시지가 삭제되었습니다.");
+            if (item.password === passInput) {
+                const { error } = await supabaseClient
+                    .from('guestbook')
+                    .delete()
+                    .eq('id', activeDeleteId);
+
+                if (error) {
+                    showToast("삭제 중 오류가 발생했습니다.");
+                } else {
+                    closeDeleteModal();
+                    showToast("메시지가 삭제되었습니다.");
+                    fetchGuestbook();
+                }
             } else {
                 showToast("비밀번호가 일치하지 않습니다.");
             }
         }
 
         function escapeHtml(text) {
-            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+            return (text || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
         }
 
+        /* RSVP Modal & Google Sheets Export */
         function openRsvpModal() {
             const modal = document.getElementById("rsvpModal");
             modal.classList.remove("opacity-0", "pointer-events-none");
@@ -1222,66 +1155,46 @@
             modal.classList.add("opacity-0", "pointer-events-none");
         }
 
-        /* 참석 여부 전달 시 구글 시트로 연결되는 연동 함수 */
         function submitRsvp() {
-            const sideSelect = document.getElementById("rsvpSide");
-            const nameInput = document.getElementById("rsvpName");
-            const countSelect = document.getElementById("rsvpCount");
-            const mealRadio = document.querySelector('input[name="rsvpMeal"]:checked');
+            const side = document.getElementById("rsvpSide").value === "groom" ? "신랑측" : "신부측";
+            const name = document.getElementById("rsvpName").value.trim();
+            const count = document.getElementById("rsvpCount").value;
+            const mealRadios = document.getElementsByName("rsvpMeal");
+            let meal = "미정";
 
-            const side = sideSelect.value === "groom" ? "신랑측" : "신부측";
-            const name = nameInput.value.trim();
-            const count = countSelect.value;
-            const meal = mealRadio ? (mealRadio.value === "yes" ? "식사함" : mealRadio.value === "no" ? "식사안함" : "미정") : "미정";
+            for (const r of mealRadios) {
+                if (r.checked) {
+                    if (r.value === "yes") meal = "식사함";
+                    else if (r.value === "no") meal = "식사안함";
+                    else meal = "미정";
+                    break;
+                }
+            }
 
             if (!name) {
                 showToast("성함을 입력해주세요 💕");
                 return;
             }
 
-            const btn = document.getElementById("submitRsvpBtn");
-            const originalBtnText = btn.innerText;
-            btn.innerText = "전송 중...";
-            btn.disabled = true;
-
-            // 구글 시트전송 데이터 구성
-            const payload = {
+            const rsvpData = {
                 side: side,
                 name: name,
                 count: count,
                 meal: meal,
-                date: new Date().toLocaleString("ko-KR")
+                submittedAt: new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })
             };
 
-            // Google Sheets Apps Script URL로 전송
-            if (GOOGLE_SHEETS_SCRIPT_URL && !GOOGLE_SHEETS_SCRIPT_URL.includes("YOUR_GOOGLE_SHEETS")) {
+            if (GOOGLE_SHEETS_SCRIPT_URL) {
                 fetch(GOOGLE_SHEETS_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors', // CORS 제한 회피를 위해 no-cors 모드 적용
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                }).then(() => {
-                    handleRsvpSuccess();
-                }).catch(err => {
-                    console.error("Google Sheets Submission Error:", err);
-                    handleRsvpSuccess(); // 네트워크 실패 시에도 하객에겐 완료 안내
-                }).finally(() => {
-                    btn.innerText = originalBtnText;
-                    btn.disabled = false;
-                });
-            } else {
-                handleRsvpSuccess();
-                btn.innerText = originalBtnText;
-                btn.disabled = false;
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(rsvpData)
+                }).catch(err => console.error("RSVP Google Sheets submit error:", err));
             }
-        }
 
-        function handleRsvpSuccess() {
-            document.getElementById("rsvpName").value = "";
             closeRsvpModal();
-            showToast("참석 정보가 구글 시트로 전달되었습니다. 감사합니다! 💕");
+            showToast("참석 정보가 전달되었습니다. 감사합니다! 💕");
 
             if (window.confetti) {
                 confetti({
