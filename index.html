@@ -235,7 +235,7 @@
             <div class="max-w-xs mx-auto space-y-7">
                 <div class="space-y-1">
                     <p class="font-sans text-xs font-semibold tracking-widest text-winterBlue-500 uppercase">❄️ WEDDING DAY ❄</p>
-                    <h3 id="calendarMonthHeader" class="font-serif text-2xl font-bold text-slate-800">2027년 1월</h3>
+                    <h3 id="calendarMonthHeader" class="font-serif text-2xl font-bold text-slate-800">2027년 1월 31일 오후 1시</h3>
                 </div>
 
                 <div class="bg-white/90 p-6 rounded-[2.2rem] shadow-sm border border-winterBlue-100 backdrop-blur-xs">
@@ -786,37 +786,36 @@
             document.getElementById("brideNameText").innerText = weddingConfig.bride.name;
         }
 
-        function renderCalendarAndCountdown() {
-            const targetDate = new Date(weddingConfig.wedding.date);
-            const year = targetDate.getFullYear();
-            const month = targetDate.getMonth() + 1;
-            const day = targetDate.getDate();
+function renderCalendarAndCountdown() {
+    const targetDate = new Date(weddingConfig.wedding.date);
+    const year = targetDate.getFullYear();
+    const month = targetDate.getMonth() + 1;
+    const day = targetDate.getDate();
 
-            document.getElementById("calendarMonthHeader").innerText = `${year}년 ${month}월`;
+    document.getElementById("calendarMonthHeader").innerText = "2027년 1월 31일 오후 1시";
 
-            const calendarGrid = document.getElementById("calendarGrid");
-            calendarGrid.innerHTML = "";
+    const calendarGrid = document.getElementById("calendarGrid");
+    calendarGrid.innerHTML = "";
 
-            const firstDayIndex = new Date(year, month - 1, 1).getDay();
-            const daysInMonth = new Date(year, month, 0).getDate();
+    const firstDayIndex = new Date(year, month - 1, 1).getDay();
+    const daysInMonth = new Date(year, month, 0).getDate();
 
-            for (let i = 0; i < firstDayIndex; i++) {
-                const empty = document.createElement("div");
-                calendarGrid.appendChild(empty);
-            }
+    for (let i = 0; i < firstDayIndex; i++) {
+        const empty = document.createElement("div");
+        calendarGrid.appendChild(empty);
+    }
 
-            for (let d = 1; d <= daysInMonth; d++) {
-                const dateCell = document.createElement("div");
-                dateCell.className = "py-1 flex items-center justify-center relative font-medium";
-                
-                if (d === day) {
-                    dateCell.innerHTML = `<span class="w-7 h-7 rounded-full bg-winterBlue-500 text-white flex items-center justify-center shadow-xs font-semibold text-xs">❄️</span>`;
-                } else {
-                    dateCell.innerText = d;
-                }
-                calendarGrid.appendChild(dateCell);
-            }
-
+    for (let d = 1; d <= daysInMonth; d++) {
+        const dateCell = document.createElement("div");
+        dateCell.className = "py-1 flex items-center justify-center relative font-medium";
+        
+        if (d === day) {
+            dateCell.innerHTML = `<span class="w-7 h-7 rounded-full bg-winterBlue-500 text-white flex items-center justify-center shadow-xs font-semibold text-xs">${d}</span>`;
+        } else {
+            dateCell.innerText = d;
+        }
+        calendarGrid.appendChild(dateCell);
+    }
             function updateTimer() {
                 const now = new Date();
                 const diff = targetDate - now;
